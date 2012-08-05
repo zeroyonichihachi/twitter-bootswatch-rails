@@ -118,6 +118,12 @@ Check out some of the swatches at [Bootswatch](http://bootswatch.com/)
 
 You have to require the coffee files "twitter_bootstrap.coffee" in your application.js
 
+```javascript
+//= require jquery
+//= require jquery_ujs
+//= require twitter_bootstrap
+```
+
 "twitter_bootstrap.coffee" allows you to easily comment out modules you don't need in your application:
 
 ```coffee
