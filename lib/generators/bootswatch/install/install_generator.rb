@@ -11,7 +11,6 @@ module Bootswatch
 
         if File.exist?('app/assets/javascripts/application.js')
           insert_into_file "app/assets/javascripts/application.js", "//= require twitter_bootstrap\n", :after => "jquery_ujs\n"
-          insert_into_file "app/assets/javascripts/application.js", "//= require twitter_bootswatch\n", :after => "twitter_bootstrap\n"
         else
           copy_file "application.js", "app/assets/javascripts/application.js"
         end
@@ -23,7 +22,6 @@ module Bootswatch
             # Good enough - that'll include our twitter_bootstrap.less & twitter_bootswatch.css.less
           else
             insert_into_file "app/assets/stylesheets/application.css", " *= require twitter_bootstrap\n", :after => "require_self\n"
-            insert_into_file "app/assets/stylesheets/application.css", " *= require twitter_bootswatch\n", :after => "twitter_bootstrap\n"
           end
         else
           copy_file "application.css", "app/assets/stylesheets/application.css"

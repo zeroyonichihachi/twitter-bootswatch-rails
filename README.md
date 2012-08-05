@@ -92,18 +92,14 @@ Bootswatch was built with Preboot, an open-source pack of mixins and variables t
 
 ## Using stylesheets with Less
 
-You have to require Bootstrap LESS (twitter_bootstrap.less and twitter_bootswatch.css.less) in your application.css
+You have to require Bootstrap LESS "twitter_bootstrap.less" in your application.css
 
 ```css
 /*
  *= require twitter_bootstrap
- *= require twitter_bootswatch
  */
 
-/* Your stylesheets goes here... */
 ```
-
-"twitter_bootstrap.less" should always be loaded before "twitter_bootswatch.css.less"
 
 "twitter_bootstrap.less" is for core style configuration that allows you to easily comment out modules you don't need in your application.
 
@@ -120,9 +116,7 @@ Check out some of the swatches at [Bootswatch](http://bootswatch.com/)
 
 ## Using Javascripts
 
-You have to require the coffee files (twitter_bootstrap.coffee and twitter_bootswatch.js.coffee) in your application.js
-
-"twitter_bootstrap.coffee" should always be loaded before "twitter_bootswatch.js.coffee"
+You have to require the coffee files "twitter_bootstrap.coffee" in your application.js
 
 "twitter_bootstrap.coffee" allows you to easily comment out modules you don't need in your application:
 
@@ -139,6 +133,8 @@ You have to require the coffee files (twitter_bootstrap.coffee and twitter_boots
 #= require twitter/bootstrap/bootstrap-collapse
 #= require twitter/bootstrap/bootstrap-carousel
 #= require twitter/bootstrap/bootstrap-typeahead
+
+#= require twitter_bootswatch
 ```
 
 "twitter_bootswatch.js.coffee" allows you to easily add swatch customization to modules loaded:

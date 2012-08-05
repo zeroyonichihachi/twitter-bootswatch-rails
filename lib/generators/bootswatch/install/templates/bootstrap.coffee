@@ -12,3 +12,5 @@
 #= require twitter/bootstrap/bootstrap-collapse
 #= require twitter/bootstrap/bootstrap-carousel
 #= require twitter/bootstrap/bootstrap-typeahead
+
+#= require twitter_bootswatch
