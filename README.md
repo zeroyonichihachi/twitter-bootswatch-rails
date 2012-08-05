@@ -25,7 +25,7 @@ If there's a real need for extra fluff, well I'd create an extension gem called 
 Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-rails) in Gemfile to install it from [RubyGems.org](http://rubygems.org):
 
 ```ruby
-gem 'twitter-bootswatch-rails', '~> 2.0.4.2'
+gem 'twitter-bootswatch-rails', '~> 2.0.4.3'
 ```
 
 or you can install from latest build;
@@ -170,4 +170,4 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
 
   - Forked version 2.1.1 from [Twitter Bootstrap Rails gem](https://github.com/seyhunak/twitter-bootstrap-rails)
   - Renamed to twitter-bootswatch-rails version 2.0.4.0
-  - Fixed generator rename bugs and bumped version 2.0.4.2
+  - Bumped version 2.0.4.3
