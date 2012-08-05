@@ -1,7 +1,7 @@
 require 'rails'
 
 module Twitter
-  module Bootstrap
+  module Bootswatch
     module Rails
       class Engine < ::Rails::Engine
 

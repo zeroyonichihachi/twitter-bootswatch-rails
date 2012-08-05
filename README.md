@@ -12,7 +12,7 @@ Why twitter-bootswatch-rails?
 
 I needed a core twitter bootstrap rails gem for projects, and I found myself having to override a lot of the helpers/fonts that were being added with each release.
 
-I kept the generator functionality but removed all view helpers and any extra stuff that's not included in Twiter Bootstrap core.
+I kept the generator functionality but removed all view helpers and any extra stuff that's not included in Twitter Bootstrap core.
 
 Plus, I wanted to be able to mix in different Twitter Bootstrap swatches/styles easily from a site like [Bootswatch](http://bootswatch.com/).
 
@@ -20,7 +20,7 @@ twitter-bootswatch-rails project will only be core Twitter Bootstrap.  If there'
 
 ## Installing Gem
 
-Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-rails) in Gemfile to install it from [RubyGems.org](http://rubygems.org);
+Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-rails) in Gemfile to install it from [RubyGems.org](http://rubygems.org):
 
 ```ruby
 gem "twitter-bootswatch-rails"
@@ -153,9 +153,7 @@ As per the Bootstrap project we don't include the responsive styles by default. 
 ## Versioning
 Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring CSS components (see breaking change 2.0.2 -> 2.0.3). Since many people using bootstrap-sass *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to bootstrap-swatch-rails will therefore have version numbers of the form `2.x.x.y`, where `2.x.x` is the release of Bootstrap we should be compatible with, and `y` is the patch version.
 
-
 ## Changelog
-<ul>
-  <li>Forked version 2.1.1 from [Twitter Bootstrap Rails gem](https://github.com/seyhunak/twitter-bootstrap-rails)</li>
-  <li>Renamed to twitter-bootswatch-rails version 2.0.4.0</li>
-</ul>
+
+  - Forked version 2.1.1 from [Twitter Bootstrap Rails gem](https://github.com/seyhunak/twitter-bootstrap-rails)
+  - Renamed to twitter-bootswatch-rails version 2.0.4.0
