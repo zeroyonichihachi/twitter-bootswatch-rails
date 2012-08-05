@@ -107,7 +107,7 @@ You have to require Bootstrap LESS (twitter_bootstrap.less and twitter_bootswatc
 
 "twitter_bootstrap.less" is for core style configuration that allows you to easily comment out modules you don't need in your application.
 
-For instance, as per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "bootstrap-responsive";` in "twitter_bootstrap.less" to enable it.
+For instance, as per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "twitter_bootstrap.less" to enable it.
 
 "twitter_bootswatch.css.less" allows you to easily switch out swatches in your application.
 
@@ -155,7 +155,7 @@ If your Twitter Bootstrap swatch comes with specific javascript/coffee just appe
 Check out some of the swatches at [Bootswatch](http://bootswatch.com/)
 
 ### Responsive styling?
-As per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "bootstrap-responsive";` in "twitter_bootstrap.less" to enable it.
+As per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "twitter_bootstrap.less" to enable it.
 
 ## Versioning
 Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring CSS components (see breaking change 2.0.2 -> 2.0.3). Since many people using bootstrap-swatch-rails *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to bootstrap-swatch-rails will therefore have version numbers of the form `2.x.x.y`, where `2.x.x` is the release of Bootstrap we should be compatible with, and `y` is the patch version.
