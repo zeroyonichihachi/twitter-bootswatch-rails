@@ -111,6 +111,8 @@ For instance, as per the Bootstrap project we don't include the responsive style
 
 "twitter_bootswatch.css.less" allows you to easily switch out swatches in your application.
 
+This idea behind "twitter_bootswatch.css.less" is you can tell a frontend developer they can override default style functionality using this file even if they don't know less.
+
 For instance, if you'd like to alter Bootstrap's own style variables, or define your LESS
 styles inheriting Bootstrap's mixins, you can do so inside twitter_bootswatch.css.less.
 
@@ -140,6 +142,8 @@ You have to require the coffee files (twitter_bootstrap.coffee and twitter_boots
 ```
 
 "twitter_bootswatch.js.coffee" allows you to easily add swatch customization to modules loaded:
+
+This idea behind this file is you can tell a frontend developer they can override default javascript module funtionality using this file, even if they don't know coffee script.
 
 Here's the default for "twitter_bootswatch.js.coffee":
 
