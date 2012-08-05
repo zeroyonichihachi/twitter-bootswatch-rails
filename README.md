@@ -143,7 +143,7 @@ You have to require the coffee files (twitter_bootstrap.coffee and twitter_boots
 
 "twitter_bootswatch.js.coffee" allows you to easily add swatch customization to modules loaded:
 
-This idea behind this file is you can tell a frontend developer they can override default javascript module funtionality using this file, even if they don't know coffee script.
+This idea behind this file is you can tell a frontend developer they can override default javascript module funtionality using this file even if they don't know coffee script.
 
 Here's the default for "twitter_bootswatch.js.coffee":
 
