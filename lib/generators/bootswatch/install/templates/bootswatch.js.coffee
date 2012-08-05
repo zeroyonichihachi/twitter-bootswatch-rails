@@ -1,4 +1,4 @@
-# twitter_bootswatch.coffee
+# twitter_bootswatch.js.coffee
 
 #jQuery ->
 #  $("a[rel=popover]").popover()
