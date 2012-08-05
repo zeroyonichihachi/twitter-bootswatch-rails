@@ -96,9 +96,9 @@ You have to require Bootstrap LESS "twitter_bootstrap.less" in your application.
 
 ```css
 /*
+ *= require_self
  *= require twitter_bootstrap
  */
-
 ```
 
 "twitter_bootstrap.less" is for core style configuration that allows you to easily comment out modules you don't need in your application.
