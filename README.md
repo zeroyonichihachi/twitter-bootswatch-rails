@@ -172,4 +172,4 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
 
   - Forked version 2.1.1 from [Twitter Bootstrap Rails gem](https://github.com/seyhunak/twitter-bootstrap-rails)
   - Renamed to twitter-bootswatch-rails version 2.0.4.0
-  - Bumped version 2.0.4.4
+  - Bumped version 2.0.4.5
