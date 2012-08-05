@@ -23,7 +23,7 @@ twitter-bootswatch-rails project will only be core Twitter Bootstrap.  If there'
 Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-rails) in Gemfile to install it from [RubyGems.org](http://rubygems.org):
 
 ```ruby
-gem "twitter-bootswatch-rails"
+gem 'twitter-bootswatch-rails', '~> 2.0.4.2'
 ```
 
 or you can install from latest build;
@@ -90,7 +90,7 @@ Bootswatch was built with Preboot, an open-source pack of mixins and variables t
 
 ## Using stylesheets with Less
 
-You have to require Bootstrap LESS (twitter_bootstrap.less and twitter_bootswatch.less) in your application.css
+You have to require Bootstrap LESS (twitter_bootstrap.less and twitter_bootswatch.css.less) in your application.css
 
 ```css
 /*
@@ -101,23 +101,24 @@ You have to require Bootstrap LESS (twitter_bootstrap.less and twitter_bootswatc
 /* Your stylesheets goes here... */
 ```
 
-"twitter_bootstrap.less" should always be loaded before "twitter_bootswatch.less"
+"twitter_bootstrap.less" should always be loaded before "twitter_bootswatch.css.less"
 
 "twitter_bootstrap.less" is for core style configuration that allows you to easily comment out modules you don't need in your application.
 
 For instance, as per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "bootstrap-responsive";` in "twitter_bootstrap.less" to enable it.
 
-"twitter_bootswatch.less" is core style configuration that allows you to easily comment out modules you don't need in your application.
+"twitter_bootswatch.css.less" is core style configuration that allows you to easily comment out modules you don't need in your application.
 
 For instance, if you'd like to alter Bootstrap's own style variables, or define your LESS
-styles inheriting Bootstrap's mixins, you can do so inside twitter_bootswatch.less.
+styles inheriting Bootstrap's mixins, you can do so inside twitter_bootswatch.css.less.
 
+Check out some of the swatches at [Bootswatch](http://bootswatch.com/)
 
 ## Using Javascripts
 
-You have to require the coffee files (twitter_bootstrap.coffee and twitter_bootswatch.coffee) in your application.js
+You have to require the coffee files (twitter_bootstrap.coffee and twitter_bootswatch.js.coffee) in your application.js
 
-"twitter_bootstrap.coffee" should always be loaded before "twitter_bootswatch.coffee"
+"twitter_bootstrap.coffee" should always be loaded before "twitter_bootswatch.js.coffee"
 
 "twitter_bootstrap.coffee" allows you to easily comment out modules you don't need in your application:
 
@@ -136,9 +137,9 @@ You have to require the coffee files (twitter_bootstrap.coffee and twitter_boots
 #= require twitter/bootstrap/bootstrap-typeahead
 ```
 
-"twitter_bootswatch.coffee" allows you to easily add customization to modules loaded:
+"twitter_bootswatch.js.coffee" allows you to easily add swatch customization to modules loaded:
 
-Here's the default for "twitter_bootswatch.coffee":
+Here's the default for "twitter_bootswatch.js.coffee":
 
 ```coffee
 jQuery ->
@@ -146,6 +147,10 @@ jQuery ->
   $(".tooltip").tooltip()
   $("a[rel=tooltip]").tooltip()
 ```
+
+If your Twitter Bootstrap swatch comes with specific javascript/coffee just append it to "twitter_bootswatch.js.coffee".
+
+Check out some of the swatches at [Bootswatch](http://bootswatch.com/)
 
 ### Responsive styling?
 As per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "bootstrap-responsive";` in "twitter_bootstrap.less" to enable it.
