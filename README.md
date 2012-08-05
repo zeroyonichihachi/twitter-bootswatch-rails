@@ -25,7 +25,7 @@ If there's a real need for extra fluff, well I'd create an extension gem called 
 Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-rails) in Gemfile to install it from [RubyGems.org](http://rubygems.org):
 
 ```ruby
-gem 'twitter-bootswatch-rails', '~> 2.0.4.4'
+gem 'twitter-bootswatch-rails', '~> 2.0.4.5'
 ```
 
 or you can install from latest build;
