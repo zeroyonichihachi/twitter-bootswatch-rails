@@ -19,7 +19,7 @@ module Bootswatch
           # Add our own require:
           content = File.read("app/assets/stylesheets/application.css")
           if content.match(/require_tree\s+\.\s*$/)
-            # Good enough - that'll include our twitter_bootstrap.less & twitter_bootswatch.css.less
+            # Good enough - that'll include our twitter_bootstrap.less
           else
             insert_into_file "app/assets/stylesheets/application.css", " *= require twitter_bootstrap\n", :after => "require_self\n"
           end
@@ -31,9 +31,9 @@ module Bootswatch
 
       def add_bootstrap
         copy_file "bootstrap.coffee", "app/assets/javascripts/twitter_bootstrap.coffee"
-        copy_file "bootswatch.js.coffee", "app/assets/javascripts/twitter_bootswatch.js.coffee"
+        copy_file "bootswatch.coffee", "app/assets/javascripts/twitter_bootswatch.coffee"
         copy_file "bootstrap.less", "app/assets/stylesheets/twitter_bootstrap.less"
-        copy_file "bootswatch.css.less", "app/assets/stylesheets/twitter_bootswatch.css.less"
+        copy_file "bootswatch.less", "app/assets/stylesheets/twitter_bootswatch.less"
       end
 
     end

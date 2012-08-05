@@ -105,12 +105,12 @@ You have to require Bootstrap LESS "twitter_bootstrap.less" in your application.
 
 For instance, as per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "twitter_bootstrap.less" to enable it.
 
-"twitter_bootswatch.css.less" allows you to easily switch out swatches in your application.
+"twitter_bootswatch.less" allows you to easily switch out swatches in your application.
 
-This idea behind "twitter_bootswatch.css.less" is you can tell a frontend developer they can override default style functionality using this file even if they don't know less.
+This idea behind "twitter_bootswatch.less" is you can tell a frontend developer they can override default style functionality using this file even if they don't know less (less is backwards compatible with css).
 
 For instance, if you'd like to alter Bootstrap's own style variables, or define your LESS
-styles inheriting Bootstrap's mixins, you can do so inside twitter_bootswatch.css.less.
+styles inheriting Bootstrap's mixins, you can do so inside twitter_bootswatch.less.
 
 Check out some of the swatches at [Bootswatch](http://bootswatch.com/)
 
@@ -143,11 +143,13 @@ You have to require the coffee files "twitter_bootstrap.coffee" in your applicat
 #= require twitter_bootswatch
 ```
 
-"twitter_bootswatch.js.coffee" allows you to easily add swatch customization to modules loaded:
+"twitter_bootswatch.coffee" allows you to easily add swatch customization to modules loaded:
 
 This idea behind this file is you can tell a frontend developer they can override default javascript module funtionality using this file even if they don't know coffee script.
 
-Here's the default for "twitter_bootswatch.js.coffee":
+To embed pre-written javascript into a coffee script file, [just wrap the embedded javascript with backticks](http://coffeescriptcookbook.com/chapters/syntax/embedding_javascript).
+
+Here's the default for "twitter_bootswatch.coffee":
 
 ```coffee
 jQuery ->
@@ -170,4 +172,4 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
 
   - Forked version 2.1.1 from [Twitter Bootstrap Rails gem](https://github.com/seyhunak/twitter-bootstrap-rails)
   - Renamed to twitter-bootswatch-rails version 2.0.4.0
-  - Bumped version 2.0.4.3
+  - Bumped version 2.0.4.4

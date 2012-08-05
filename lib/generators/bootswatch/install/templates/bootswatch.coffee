@@ -1,4 +1,5 @@
-# twitter_bootswatch.js.coffee
+# twitter_bootswatch.coffee
+# http://coffeescriptcookbook.com/chapters/syntax/embedding_javascript
 
 #jQuery ->
 #  $("a[rel=popover]").popover()
