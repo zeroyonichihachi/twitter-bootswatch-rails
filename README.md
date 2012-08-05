@@ -116,7 +116,7 @@ Check out some of the swatches at [Bootswatch](http://bootswatch.com/)
 
 ## Using Javascripts
 
-You have to require the coffee files "twitter_bootstrap.coffee" in your application.js
+You have to require the coffeescript file "twitter_bootstrap.coffee" in your application.js:
 
 ```javascript
 //= require jquery
@@ -145,9 +145,9 @@ You have to require the coffee files "twitter_bootstrap.coffee" in your applicat
 
 "twitter_bootswatch.coffee" allows you to easily add swatch customization to modules loaded:
 
-This idea behind this file is you can tell a frontend developer they can override default javascript module funtionality using this file even if they don't know coffee script.
+This idea behind this file is you can tell a frontend developer they can override default javascript module funtionality using this file even if they don't know coffeescript.
 
-To embed pre-written javascript into a coffee script file, [just wrap the embedded javascript with backticks](http://coffeescriptcookbook.com/chapters/syntax/embedding_javascript).
+To embed pre-written javascript into a coffeescript file, [just wrap the embedded javascript with backticks](http://coffeescriptcookbook.com/chapters/syntax/embedding_javascript).
 
 Here's the default for "twitter_bootswatch.coffee":
 
@@ -158,7 +158,7 @@ jQuery ->
   $("a[rel=tooltip]").tooltip()
 ```
 
-If your Twitter Bootstrap swatch comes with specific javascript/coffee just append it to "twitter_bootswatch.js.coffee".
+If your Twitter Bootstrap swatch comes with specific javascript/coffeescript just append it to "twitter_bootswatch.js.coffee".
 
 Check out some of the swatches at [Bootswatch](http://bootswatch.com/)
 
