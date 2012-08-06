@@ -1,4 +1,4 @@
-# twitter_bootstrap.coffee
+# bootstrap.coffee
 
 #= require twitter/bootstrap/bootstrap-transition
 #= require twitter/bootstrap/bootstrap-alert
@@ -13,4 +13,4 @@
 #= require twitter/bootstrap/bootstrap-carousel
 #= require twitter/bootstrap/bootstrap-typeahead
 
-#= require twitter_bootswatch
+#= require twitter/bootswatch

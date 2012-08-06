@@ -1,4 +1,4 @@
-# twitter_bootswatch.coffee
+# bootswatch.coffee
 # http://coffeescriptcookbook.com/chapters/syntax/embedding_javascript
 
 #jQuery ->
