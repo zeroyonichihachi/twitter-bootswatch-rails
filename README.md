@@ -1,22 +1,22 @@
 # Twitter Bootstrap for Rails 3.1+ Asset Pipeline
 [Twitter Bootstrap](http://twitter.github.com/bootstrap/index.html) is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
 
-twitter-bootswatch-rails project integrates Twitter Bootstrap CSS toolkit for Rails 3.1+ Asset Pipeline
+twitter-bootswatch-rails project integrates Twitter Bootstrap CSS toolkit for the Rails 3.1+ Asset Pipeline
 
 twitter-bootswatch-rails goals:
 
-  - Easy fine grained control over which javascript and less modules are loaded by default. Not every app needs a carousel.
-  - Override Twitter Bootstrap easily for customization in your application. Standard less/coffee files to customize across project.
+  - Easy control over which javascript and less modules are loaded by default. Not every app needs a carousel.
+  - Override Twitter Bootstrap easily for customization in your application. 
+  - Standard less files "bootswatch/variables.less" and "bootswatch/bootswatch.less" to customize your application style.
   - Easily mix Twitter Bootstrap swatches/styles from a site like [Bootswatch](http://bootswatch.com/).
-  - Make it easy for frontend developers to build swatches for Twitter Bootstrap.
+  - Make it easy for frontend developers to build swatches for Twitter Bootstrap and design new themes in real time.
   - Gem version semantics extend Twitter Bootstrap version semantics, making it simple to know what version of bootstrap the gem is using.
-
 
 ## Demo
 
-[Demo to show overriding the default bootstarp style](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo)
+[Demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) to show overriding the default bootstrap style
 
-The demo will tell you everything you need to know to use this gem.
+The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) will show you how to use this gem.
 
 ## Installing Gem
 
@@ -39,7 +39,7 @@ You can run bundle from command line
 
 ## Installing to App (using Generators)
 
-You can run following generators to get started with Twitter Bootswatch quickly.
+You can run the following generators to get started with Twitter Bootswatch quickly.
 
 
 Install (requires directives to Asset pipeline.)
@@ -101,11 +101,13 @@ You have to require "bootswatch/loader.less" in your application.css
 */
 ```
 
-"bootswatch/loader.less" is for core style configuration that allows you to easily comment out modules you don't need in your application.
+"bootswatch/loader.less" allows you to easily comment out less modules you don't need in your application.
 
 For instance, as per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "bootswatch/loader.less" to enable it.
 
-"bootswatch/variables.less" and "bootswatch/bootswatch.less" allows you to easily switch out swatches in your application.
+"bootswatch/variables.less" override Twitter Bootstrap varialble defaults in this file.
+
+"bootswatch/bootswatch.less" customize the style of Twitter Bootstrap base css and component style here.
 
 Check out some of the swatches at [Bootswatch](http://bootswatch.com/)
 
