@@ -14,7 +14,7 @@ twitter-bootswatch-rails goals:
 
 ## Demo
 
-[Demo to show overriding the default bootstarp stylel](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo)
+[Demo to show overriding the default bootstarp style](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo)
 
 The demo will tell you everything you need to know to use this gem.
 
@@ -122,7 +122,7 @@ You have to require the coffeescript file "bootswatch/loader.coffee" in your app
 "bootswatch/loader.coffee" allows you to easily comment out modules you don't need in your application:
 
 ```coffee
-# loader.coffee
+# bootswatch/loader.coffee
 
 #= require twitter/bootstrap/bootstrap-transition
 #= require twitter/bootstrap/bootstrap-alert
