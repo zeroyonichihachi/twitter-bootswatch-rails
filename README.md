@@ -100,7 +100,7 @@ You have to require "bootswatch/loader.less" in your application.css
 
 For instance, as per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "bootswatch/loader.less" to enable it.
 
-"bootswatch/variables.less" override Twitter Bootstrap varialble defaults in this file.
+"bootswatch/variables.less" customize Twitter Bootstrap "variables.less" defaults in this file.
 
 "bootswatch/bootswatch.less" customize the style of Twitter Bootstrap base css and component style here.
 
