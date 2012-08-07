@@ -34,53 +34,60 @@
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'images/favicon.ico', :rel => 'shortcut icon' %>
   </head>
-  <body>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Dummy</a>
-          <div class="container nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+  <body class="preview" data-offset="50" data-target=".subnav" data-spy="scroll">
 
-    <div class="container">
-      <div class="content">
-        <div class="row">
-           <div class="span9">
-              <%= yield %>
-            </div>
-            <div class="span3">
-              <div class="well sidebar-nav">
-                <h3>Sidebar</h3>
-                <ul class="nav nav-list">
-                  <li class="nav-header">Sidebar</li>
-                  <li><%= link_to "Link1", "/path1"  %></li>
-                  <li><%= link_to "Link2", "/path2"  %></li>
-                  <li><%= link_to "Link3", "/path3"  %></li>
-                </ul>
-              </div><!--/.well -->
-            </div><!--/span-->
-        </div><!--/row-->
-      </div><!--/content-->
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container">
+<a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+<a href="#" class="brand">Bootswatch</a>
+<div id="main-menu" class="nav-collapse"><ul id="main-menu-left" class="nav">
+<li><a href="#">News</a></li>
+<li><a href="/#gallery" id="swatch-link">Gallery</a></li>
+<li class="dropdown">
+<a href="#" data-toggle="dropdown" class="dropdown-toggle">Preview <b class="caret"></b></a>
+<ul id="swatch-menu" class="dropdown-menu">
+<li><a href="/default">Default</a></li>
+<li class="divider"></li>
+<li><a href="#">Test 1</a></li>
+<li><a href="#">Test 2</a></li>
+</ul>
+</li>
+<li id="preview-menu" class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Download <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="#" target="_blank">bootstrap.min.css</a></li>
+<li><a href="#" target="_blank">bootstrap.css</a></li>
+<li class="divider"></li>
+<li><a href="#" target="_blank">variables.less</a></li>
+<li><a href="#" target="_blank">bootswatch.less</a></li>
+</ul></li></ul>
+<ul id="main-menu-right" class="nav pull-right">
+<li><a href="#" target="_blank" rel="tooltip" data-original-title="Showcase of Bootstrap sites &amp; apps">Built With Bootstrap <i class="icon-share-alt icon"></i></a></li>
+<li><a href="#" target="_blank" rel="tooltip" data-original-title="Marketplace for premium Bootstrap templates">WrapBootstrap <i class="icon-share-alt icon"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 
-      <footer>
-        <p>&copy; Company 2012</p>
-      </footer>
+ <div class="container">
 
-    </div> <!-- /container -->
+
+   <%= yield %>
+
+
+  <!-- Footer
+   ================================================== -->
+   <footer class="footer">
+     <p class="pull-right"><a href="#">Back to top</a></p>
+   </footer>
+
+ </div><!-- /container -->
 
     <!-- Javascripts
     ================================================== -->

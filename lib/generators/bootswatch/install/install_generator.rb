@@ -27,14 +27,17 @@ module Bootswatch
 
       def add_bootstrap
         empty_directory "app/assets/javascripts/bootswatch"
-        copy_file "loader.coffee", "app/assets/javascripts/bootswatch/loader.coffee"
-        copy_file "swatch.coffee", "app/assets/javascripts/bootswatch/swatch.coffee"
+        template "loader.coffee.tt", "app/assets/javascripts/bootswatch/loader.coffee"
+        copy_file "bootswatch.coffee", "app/assets/javascripts/bootswatch/bootswatch.coffee"
 
         empty_directory "app/assets/stylesheets/bootswatch"
-        copy_file "loader.less", "app/assets/stylesheets/bootswatch/loader.less"
+
+        less_imports = File.read(find_in_source_paths('bootstrap.less')).scan(Less::Rails::ImportProcessor::IMPORT_SCANNER).flatten.compact.uniq
+        template "loader.less.tt", "app/assets/stylesheets/bootswatch/loader.less", {less_imports: less_imports}
+
         copy_file "base.less", "app/assets/stylesheets/bootswatch/base.less"
         copy_file "variables.less", "app/assets/stylesheets/bootswatch/variables.less"
-        copy_file "swatch.less", "app/assets/stylesheets/bootswatch/swatch.less"
+        copy_file "bootswatch.less", "app/assets/stylesheets/bootswatch/bootswatch.less"
       end
 
     end
