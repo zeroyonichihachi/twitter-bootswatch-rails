@@ -1,15 +1,16 @@
 # Twitter Bootstrap for Rails 3.1+ Asset Pipeline
-Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
+[Twitter Bootstrap](http://twitter.github.com/bootstrap/index.html) is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
 
-twitter-bootswatch-rails project integrates Bootstrap CSS toolkit for Rails 3.1+ Asset Pipeline
+twitter-bootswatch-rails project integrates Twitter Bootstrap CSS toolkit for Rails 3.1+ Asset Pipeline
 
-Why twitter-bootswatch-rails?
+twitter-bootswatch-rails goals:
 
-Easily control which javascript and less modules are loaded by default.
+  - Easy fine grained control over which javascript and less modules are loaded by default. Not every app needs a carousel.
+  - Override Twitter Bootstrap easily for customization in your application. Standard less/coffee files to customize across project.
+  - Easily mix Twitter Bootstrap swatches/styles from a site like [Bootswatch](http://bootswatch.com/).
+  - Make it easy for frontend developers to build swatches for Twitter Bootstrap.
+  - Gem version semantics extend Twitter Bootstrap version semantics, making it simple to know what version of bootstrap the gem is using.
 
-Easily mix Twitter Bootstrap swatches/styles easily from a site like [Bootswatch](http://bootswatch.com/).
-
-twitter-bootswatch-rails project will only be core Twitter Bootstrap, i.e., only purpose is to bootstrap the project and provide easy access to customization.
 
 ## Demo
 
@@ -22,7 +23,7 @@ The demo will tell you everything you need to know to use this gem.
 Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-rails) in Gemfile to install it from [RubyGems.org](http://rubygems.org):
 
 ```ruby
-gem 'twitter-bootswatch-rails', '~> 2.0.4.6'
+gem 'twitter-bootswatch-rails', '~> 2.0.4.7'
 ```
 
 or you can install from latest build;
@@ -38,7 +39,7 @@ You can run bundle from command line
 
 ## Installing to App (using Generators)
 
-You can run following generators to get started with Twitter Bootstrap quickly.
+You can run following generators to get started with Twitter Bootswatch quickly.
 
 
 Install (requires directives to Asset pipeline.)
@@ -50,22 +51,23 @@ Usage:
     rails g bootswatch:install
 
 
-Layout (generates Twitter Bootstrap compatible layout) - (Haml and Slim supported)
+Layout (generates a basic Twitter Bootstrap compatible layout) - ([haml-rails](https://github.com/indirect/haml-rails) gem supported)
+
 
 
 Usage:
 
 
-    rails g bootswatch:layout [LAYOUT_NAME] [*ﬁxed or ﬂuid]
+    rails g bootswatch:layout
 
 
 Example:
 
 
-    rails g bootswatch:layout application fixed
+    rails g bootswatch:layout application
 
 
-Themed (generates Twitter Bootstrap compatible scaffold views.) - (Haml and Slim supported)
+Themed (generates Twitter Bootstrap compatible scaffold views.) - ([simple_form](https://github.com/plataformatec/simple_form) and [haml-rails](https://github.com/indirect/haml-rails) gems supported)
 
 
 Usage:
@@ -83,7 +85,7 @@ Example:
 
 
 
-## Using with Less
+## Using less-rails gem
 
 Read up on the [less-rails](https://github.com/metaskills/less-rails/) gem.
 
@@ -99,9 +101,9 @@ You have to require "bootswatch/loader.less" in your application.css
 */
 ```
 
-"loader.less" is for core style configuration that allows you to easily comment out modules you don't need in your application.
+"bootswatch/loader.less" is for core style configuration that allows you to easily comment out modules you don't need in your application.
 
-For instance, as per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "loader.less" to enable it.
+For instance, as per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "bootswatch/loader.less" to enable it.
 
 "bootswatch/variables.less" and "bootswatch/bootswatch.less" allows you to easily switch out swatches in your application.
 
@@ -139,7 +141,7 @@ You have to require the coffeescript file "bootswatch/loader.coffee" in your app
 #= require bootswatch/bootswatch
 ```
 
-"bootswatch.coffee" allows you to easily add swatch customization to javascript modules loaded:
+"bootswatch/bootswatch.coffee" allows you to easily add swatch customization to javascript modules loaded:
 
 Check out some of the swatches at [Bootswatch](http://bootswatch.com/)
 
@@ -151,4 +153,4 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
 
 ## Changelog
 
-  - After a long vision quest the gem was bumped version 2.0.4.6
+  - Rough cuts and bumped version to 2.0.4.7
