@@ -11,6 +11,12 @@ Easily mix Twitter Bootstrap swatches/styles easily from a site like [Bootswatch
 
 twitter-bootswatch-rails project will only be core Twitter Bootstrap, i.e., only purpose is to bootstrap the project and provide easy access to customization.
 
+## Demo
+
+[Demo to show overriding the default bootstarp stylel](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo)
+
+The demo will tell you everything you need to know to use this gem.
+
 ## Installing Gem
 
 Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-rails) in Gemfile to install it from [RubyGems.org](http://rubygems.org):
@@ -145,6 +151,4 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
 
 ## Changelog
 
-  - Forked version 2.1.1 from [Twitter Bootstrap Rails gem](https://github.com/seyhunak/twitter-bootstrap-rails)
-  - Renamed to twitter-bootswatch-rails version 2.0.4.0
-  - Bumped version 2.0.4.6
+  - After a long vision quest the gem was bumped version 2.0.4.6
