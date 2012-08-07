@@ -14,9 +14,7 @@ twitter-bootswatch-rails goals:
 
 ## Demo
 
-[Demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) to show overriding the default bootstrap style
-
-The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) will show you how to use this gem.
+The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) will show you how this gem can be used.
 
 ## Installing Gem
 
