@@ -3,7 +3,7 @@
 
 twitter-bootswatch-rails project integrates Twitter Bootstrap CSS toolkit for the Rails 3.1+ Asset Pipeline
 
-twitter-bootswatch-rails goals:
+twitter-bootswatch-rails gem goals:
 
   - Easy control over which javascript and less modules are loaded by default. Not every app needs a carousel.
   - Override Twitter Bootstrap easily for customization in your application. 
