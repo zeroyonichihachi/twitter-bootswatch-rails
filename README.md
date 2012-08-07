@@ -1,31 +1,22 @@
-# Twitter Bootstrap for Rails 3.2+ Asset Pipeline
+# Twitter Bootstrap for Rails 3.1+ Asset Pipeline
 Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
 
-twitter-bootswatch-rails project integrates Bootstrap CSS toolkit for Rails 3.2+ Asset Pipeline
-
-twitter-bootswatch-rails project is a fork and customization of the
-[Twitter Bootstrap Rails gem](https://github.com/seyhunak/twitter-bootstrap-rails)
-
-So if you are wanting view helpers etc... please see [Twitter Bootstrap Rails gem](https://github.com/seyhunak/twitter-bootstrap-rails)
+twitter-bootswatch-rails project integrates Bootstrap CSS toolkit for Rails 3.1+ Asset Pipeline
 
 Why twitter-bootswatch-rails?
 
-I needed a core twitter bootstrap rails gem for projects, and I found myself having to override a lot of the helpers/fonts that were being added with each release.
+Easily control which javascript and less modules are loaded by default.
 
-I kept the generator functionality but removed all view helpers and any extra stuff that's not included in Twitter Bootstrap core.
+Easily mix Twitter Bootstrap swatches/styles easily from a site like [Bootswatch](http://bootswatch.com/).
 
-Plus, I wanted to be able to mix in different Twitter Bootstrap swatches/styles easily from a site like [Bootswatch](http://bootswatch.com/).
-
-twitter-bootswatch-rails project will only be core Twitter Bootstrap.
-
-If there's a real need for extra fluff, well I'd create an extension gem called twitter-bootswatch-rails-ext instead.
+twitter-bootswatch-rails project will only be core Twitter Bootstrap, i.e., only purpose is to bootstrap the project and provide easy access to customization.
 
 ## Installing Gem
 
 Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-rails) in Gemfile to install it from [RubyGems.org](http://rubygems.org):
 
 ```ruby
-gem 'twitter-bootswatch-rails', '~> 2.0.4.5'
+gem 'twitter-bootswatch-rails', '~> 2.0.4.6'
 ```
 
 or you can install from latest build;
@@ -88,77 +79,61 @@ Example:
 
 ## Using with Less
 
-Bootswatch was built with Preboot, an open-source pack of mixins and variables to be used in conjunction with Less, a CSS preprocessor for faster and easier web development.
+Read up on the [less-rails](https://github.com/metaskills/less-rails/) gem.
 
 ## Using stylesheets with Less
 
-You have to require Bootstrap LESS "twitter_bootstrap.less" in your application.css
+You have to require "bootswatch/loader.less" in your application.css
 
 ```css
 /*
  *= require_self
- *= require twitter_bootstrap
- */
+ *= require bootswatch/loader
+ *= require_tree
+*/
 ```
 
-"twitter_bootstrap.less" is for core style configuration that allows you to easily comment out modules you don't need in your application.
+"loader.less" is for core style configuration that allows you to easily comment out modules you don't need in your application.
 
-For instance, as per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "twitter_bootstrap.less" to enable it.
+For instance, as per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "loader.less" to enable it.
 
-"twitter_bootswatch.less" allows you to easily switch out swatches in your application.
-
-This idea behind "twitter_bootswatch.less" is you can tell a frontend developer they can override default style functionality using this file even if they don't know less (less is backwards compatible with css).
-
-For instance, if you'd like to alter Bootstrap's own style variables, or define your LESS
-styles inheriting Bootstrap's mixins, you can do so inside twitter_bootswatch.less.
+"bootswatch/variables.less" and "bootswatch/bootswatch.less" allows you to easily switch out swatches in your application.
 
 Check out some of the swatches at [Bootswatch](http://bootswatch.com/)
 
 ## Using Javascripts
 
-You have to require the coffeescript file "twitter_bootstrap.coffee" in your application.js:
+You have to require the coffeescript file "bootswatch/loader.coffee" in your application.js:
 
 ```javascript
 //= require jquery
 //= require jquery_ujs
-//= require twitter_bootstrap
+//= require bootswatch/loader
 ```
 
-"twitter_bootstrap.coffee" allows you to easily comment out modules you don't need in your application:
+"bootswatch/loader.coffee" allows you to easily comment out modules you don't need in your application:
 
 ```coffee
+# loader.coffee
+
 #= require twitter/bootstrap/bootstrap-transition
 #= require twitter/bootstrap/bootstrap-alert
-#= require twitter/bootstrap/bootstrap-modal
+#= require twitter/bootstrap/bootstrap-button
+#= require twitter/bootstrap/bootstrap-carousel
+#= require twitter/bootstrap/bootstrap-collapse
 #= require twitter/bootstrap/bootstrap-dropdown
-#= require twitter/bootstrap/bootstrap-scrollspy
-#= require twitter/bootstrap/bootstrap-tab
+#= require twitter/bootstrap/bootstrap-modal
 #= require twitter/bootstrap/bootstrap-tooltip
 #= require twitter/bootstrap/bootstrap-popover
-#= require twitter/bootstrap/bootstrap-button
-#= require twitter/bootstrap/bootstrap-collapse
-#= require twitter/bootstrap/bootstrap-carousel
+#= require twitter/bootstrap/bootstrap-scrollspy
+#= require twitter/bootstrap/bootstrap-tab
 #= require twitter/bootstrap/bootstrap-typeahead
 
-#= require twitter_bootswatch
+
+#= require bootswatch/bootswatch
 ```
 
-"twitter_bootswatch.coffee" allows you to easily add swatch customization to modules loaded:
-
-This idea behind this file is you can tell a frontend developer they can override default javascript module funtionality using this file even if they don't know coffeescript.
-
-To embed pre-written javascript into a coffeescript file, [just wrap the embedded javascript with backticks](http://coffeescriptcookbook.com/chapters/syntax/embedding_javascript).
-
-Here's the default for "twitter_bootswatch.coffee":
-
-```coffee
-jQuery ->
-  $("a[rel=popover]").popover()
-  $(".tooltip").tooltip()
-  $("a[rel=tooltip]").tooltip()
-```
-
-If your Twitter Bootstrap swatch comes with specific javascript/coffeescript just append it to "twitter_bootswatch.js.coffee".
+"bootswatch.coffee" allows you to easily add swatch customization to javascript modules loaded:
 
 Check out some of the swatches at [Bootswatch](http://bootswatch.com/)
 
@@ -172,4 +147,4 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
 
   - Forked version 2.1.1 from [Twitter Bootstrap Rails gem](https://github.com/seyhunak/twitter-bootstrap-rails)
   - Renamed to twitter-bootswatch-rails version 2.0.4.0
-  - Bumped version 2.0.4.5
+  - Bumped version 2.0.4.6
