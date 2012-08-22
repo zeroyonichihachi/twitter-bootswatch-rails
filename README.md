@@ -18,7 +18,7 @@ The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) wil
 Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-rails) in Gemfile to install it from [RubyGems.org](http://rubygems.org):
 
 ```ruby
-gem 'twitter-bootswatch-rails', '~> 2.0.4.7'
+gem 'twitter-bootswatch-rails', '~> 2.1.0.0'
 ```
 
 or you can install from latest build;
@@ -150,4 +150,4 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
 
 ## Changelog
 
-  - Rough cuts and bumped version to 2.0.4.7
+  - Updated gem and bumped version to 2.1.0.0

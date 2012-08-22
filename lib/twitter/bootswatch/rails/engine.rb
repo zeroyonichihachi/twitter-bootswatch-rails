@@ -8,7 +8,17 @@ module Twitter
         initializer 'twitter-bootswatch-rails.setup',
           :after => 'less-rails.after.load_config_initializers', 
           :group => :all do |app|
-          app.config.less.paths << File.join(config.root, 'vendor', 'toolkit')
+
+            paths = %W[
+              #{File.join(config.root, 'vendor', 'toolkit')}
+              #{File.join(config.root, 'app', 'assets', 'stylesheets', 'bootswatch')}
+            ]
+
+            paths.each do |p|
+              app.config.assets.paths << p
+              app.config.less.paths << p
+            end
+
           end
 
         initializer 'twitter-bootswatch-rails.setup_helpers' do |app|

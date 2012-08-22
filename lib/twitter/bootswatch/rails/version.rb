@@ -1,7 +1,7 @@
 module Twitter
   module Bootswatch
     module Rails
-      VERSION = "2.0.4.7"
+      VERSION = "2.1.0.0"
     end
   end
 end
