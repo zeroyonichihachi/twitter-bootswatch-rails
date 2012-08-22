@@ -133,6 +133,7 @@ You have to require the coffeescript file "bootswatch/loader.coffee" in your app
 #= require twitter/bootstrap/bootstrap-scrollspy
 #= require twitter/bootstrap/bootstrap-tab
 #= require twitter/bootstrap/bootstrap-typeahead
+#= require twitter/bootstrap/bootstrap-affix
 
 
 #= require bootswatch/bootswatch
@@ -146,7 +147,7 @@ Check out some of the swatches at [Bootswatch](http://bootswatch.com/)
 As per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "bootswatch/loader.less" to enable it.
 
 ## Versioning
-Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring CSS components (see breaking change 2.0.2 -> 2.0.3). Since many people using bootstrap-swatch-rails *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to bootstrap-swatch-rails will therefore have version numbers of the form `2.x.x.y`, where `2.x.x` is the release of Bootstrap we should be compatible with, and `y` is the patch version.
+Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring CSS components (see breaking change 2.0.4 -> 2.1.0). Since many people using bootstrap-swatch-rails *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to bootstrap-swatch-rails will therefore have version numbers of the form `2.x.x.y`, where `2.x.x` is the release of Bootstrap we should be compatible with, and `y` is the patch version.
 
 ## Changelog
 
