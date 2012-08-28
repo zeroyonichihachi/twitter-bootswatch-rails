@@ -16,8 +16,6 @@ module Bootswatch
         end
 
         if File.exist?('app/assets/stylesheets/application.css')
-          # Add our own require:
-          content = File.read("app/assets/stylesheets/application.css")
           insert_into_file "app/assets/stylesheets/application.css", " *= require bootswatch/loader\n", :after => "require_self\n"
         else
           copy_file "application.css", "app/assets/stylesheets/application.css"
@@ -25,19 +23,41 @@ module Bootswatch
 
       end
 
-      def add_bootstrap
-        empty_directory "app/assets/javascripts/bootswatch"
-        template "loader.coffee.tt", "app/assets/javascripts/bootswatch/loader.coffee"
-        copy_file "bootswatch.coffee", "app/assets/javascripts/bootswatch/bootswatch.coffee"
+      def add_javascripts
 
-        empty_directory "app/assets/stylesheets/bootswatch"
+        javascripts_dest_path = "app/assets/javascripts/bootswatch"
+        empty_directory javascripts_dest_path
+
+        template "loader.coffee.tt", File.join(javascripts_dest_path,"loader.coffee")
+
+         # let's auto backup if a custom bootswatch.coffee already exists
+        if File.exist?(File.join(javascripts_dest_path,"bootswatch.coffee"))
+          File.rename(File.join(javascripts_dest_path,"bootswatch.coffee"), File.join(javascripts_dest_path,"bootswatch_bak.coffee"))
+        end
+        copy_file "bootswatch.coffee", File.join(javascripts_dest_path,"bootswatch.coffee")
+
+      end
+
+      def add_stylesheets
+
+        stylesheets_dest_path = "app/assets/stylesheets/bootswatch"
+        empty_directory stylesheets_dest_path
 
         less_imports = File.read(find_in_source_paths('bootstrap.less')).scan(Less::Rails::ImportProcessor::IMPORT_SCANNER).flatten.compact.uniq
-        template "loader.less.tt", "app/assets/stylesheets/bootswatch/loader.less", {less_imports: less_imports}
 
-        copy_file "base.less", "app/assets/stylesheets/bootswatch/base.less"
-        copy_file "variables.less", "app/assets/stylesheets/bootswatch/variables.less"
-        copy_file "bootswatch.less", "app/assets/stylesheets/bootswatch/bootswatch.less"
+        template "loader.less.tt", File.join(stylesheets_dest_path,"loader.less"), {less_imports: less_imports}
+
+        # let's auto backup if a custom variables.less already exists
+        if File.exist?(File.join(stylesheets_dest_path,"variables.less"))
+          File.rename(File.join(stylesheets_dest_path,"variables.less"), File.join(stylesheets_dest_path,"variables_bak.less"))
+        end
+        copy_file "variables.less", File.join(stylesheets_dest_path,"variables.less")
+
+        # let's auto backup if a custom bootswatch.less already exists
+        if File.exist?(File.join(stylesheets_dest_path,"bootswatch.less"))
+          File.rename(File.join(stylesheets_dest_path,"bootswatch.less"), File.join(stylesheets_dest_path,"bootswatch_bak.less"))
+        end
+        copy_file "bootswatch.less", File.join(stylesheets_dest_path,"bootswatch.less")
       end
 
     end
