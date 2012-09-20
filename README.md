@@ -18,7 +18,7 @@ The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) wil
 Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-rails) in Gemfile to install it from [RubyGems.org](http://rubygems.org):
 
 ```ruby
-gem 'twitter-bootswatch-rails', '~> 2.1.0.2'
+gem 'twitter-bootswatch-rails', '~> 2.1.1.0'
 ```
 
 or you can install from latest build;
@@ -65,7 +65,7 @@ Example:
 Themed (generates Twitter Bootstrap compatible scaffold views.) - ([simple_form](https://github.com/plataformatec/simple_form) and [haml-rails](https://github.com/indirect/haml-rails) gems supported)
 
 
-Usage:
+Usage (model and table must already exist):
 
 
     rails g bootswatch:themed [RESOURCE_NAME]
@@ -151,4 +151,4 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
 
 ## Changelog
 
-  - Updated gem and bumped version to 2.1.0.2
+  - Updated gem and bumped version to 2.1.1.0
