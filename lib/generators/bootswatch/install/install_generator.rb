@@ -32,7 +32,7 @@ module Bootswatch
 
          # let's auto backup if a custom bootswatch.coffee already exists
         if File.exist?(File.join(javascripts_dest_path,"bootswatch.coffee"))
-          File.rename(File.join(javascripts_dest_path,"bootswatch.coffee"), File.join(javascripts_dest_path,"bootswatch_bak.coffee"))
+          File.rename(File.join(javascripts_dest_path,"bootswatch.coffee"), File.join(javascripts_dest_path,"bootswatch.coffee_bak"))
         end
         copy_file "bootswatch.coffee", File.join(javascripts_dest_path,"bootswatch.coffee")
 
@@ -49,13 +49,13 @@ module Bootswatch
 
         # let's auto backup if a custom variables.less already exists
         if File.exist?(File.join(stylesheets_dest_path,"variables.less"))
-          File.rename(File.join(stylesheets_dest_path,"variables.less"), File.join(stylesheets_dest_path,"variables_bak.less"))
+          File.rename(File.join(stylesheets_dest_path,"variables.less"), File.join(stylesheets_dest_path,"variables.less_bak"))
         end
         copy_file "variables.less", File.join(stylesheets_dest_path,"variables.less")
 
         # let's auto backup if a custom bootswatch.less already exists
         if File.exist?(File.join(stylesheets_dest_path,"bootswatch.less"))
-          File.rename(File.join(stylesheets_dest_path,"bootswatch.less"), File.join(stylesheets_dest_path,"bootswatch_bak.less"))
+          File.rename(File.join(stylesheets_dest_path,"bootswatch.less"), File.join(stylesheets_dest_path,"bootswatch.less_bak"))
         end
         copy_file "bootswatch.less", File.join(stylesheets_dest_path,"bootswatch.less")
       end
