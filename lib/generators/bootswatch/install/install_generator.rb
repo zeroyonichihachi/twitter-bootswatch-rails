@@ -45,7 +45,7 @@ module Bootswatch
 
         less_imports = File.read(find_in_source_paths('bootstrap.less')).scan(Less::Rails::ImportProcessor::IMPORT_SCANNER).flatten.compact.uniq
 
-        template "loader.less.tt", File.join(stylesheets_dest_path,"loader.less"), {less_imports: less_imports}
+        template "loader.css.less.tt", File.join(stylesheets_dest_path,"loader.css.less"), {less_imports: less_imports}
 
         # let's auto backup if a custom variables.less already exists
         if File.exist?(File.join(stylesheets_dest_path,"variables.less"))

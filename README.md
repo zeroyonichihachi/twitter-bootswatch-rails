@@ -22,7 +22,19 @@ The gem [twitter-bootswatch-rails-helpers](https://github.com/scottvrosenthal/tw
 Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-rails) in Gemfile to install it from [RubyGems.org](http://rubygems.org):
 
 ```ruby
-gem 'twitter-bootswatch-rails', '~> 2.1.1.0'
+group :assets do
+  gem 'less-rails', '~> 2.2.3'
+  gem 'coffee-rails', '~> 3.2.2'
+
+  gem 'therubyracer', :require => 'v8'
+  gem 'uglifier', '>= 1.3.0'
+
+  # just put after rails asset defaults
+  gem 'twitter-bootswatch-rails', '~> 2.1.1.1'
+end
+
+# View Helpers Gem can go outside the assets group
+gem 'twitter-bootswatch-rails-helpers', '~> 2.1.1.1'
 ```
 
 or you can install from latest build;
@@ -31,9 +43,9 @@ or you can install from latest build;
 gem 'twitter-bootswatch-rails', :git => 'git://github.com/scottvrosenthal/twitter-bootswatch-rails.git'
 ```
 
-You can run bundle from command line
+Run bundle from command line
 
-    bundle install
+    bundle
 
 
 ## Installing to App (using Generators)
@@ -90,19 +102,18 @@ Read up on the [less-rails](https://github.com/metaskills/less-rails/) gem.
 
 ## Using stylesheets with Less
 
-You have to require "bootswatch/loader.less" in your application.css
+You have to require "bootswatch/loader.css.less" in your application.css
 
 ```css
 /*
  *= require_self
  *= require bootswatch/loader
- *= require_tree
 */
 ```
 
-"bootswatch/loader.less" allows you to easily comment out less modules you don't need in your application.
+"bootswatch/loader.css.less" allows you to easily comment out less modules you don't need in your application.
 
-For instance, as per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "bootswatch/loader.less" to enable it.
+For instance, as per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "bootswatch/loader.css.less" to enable it.
 
 "bootswatch/variables.less" customize Twitter Bootstrap "variables.less" defaults in this file.
 
@@ -155,4 +166,4 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
 
 ## Changelog
 
-  - Updated gem and bumped version to 2.1.1.0
+  - Updated gem and bumped version to 2.1.1.1
