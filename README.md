@@ -23,18 +23,18 @@ Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-boot
 
 ```ruby
 group :assets do
-  gem 'less-rails', '~> 2.2.3'
+  gem 'less-rails', '~> 2.2.5'
   gem 'coffee-rails', '~> 3.2.2'
 
   gem 'therubyracer', :require => 'v8'
   gem 'uglifier', '>= 1.3.0'
 
   # just put after rails asset defaults
-  gem 'twitter-bootswatch-rails', '~> 2.1.1.1'
+  gem 'twitter-bootswatch-rails', '~> 2.2.0.0'
 end
 
 # View Helpers Gem can go outside the assets group
-gem 'twitter-bootswatch-rails-helpers', '~> 2.1.1.1'
+gem 'twitter-bootswatch-rails-helpers'
 ```
 
 or you can install from latest build;
@@ -166,4 +166,4 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
 
 ## Changelog
 
-  - Updated gem and bumped version to 2.1.1.1
+  - Updated gem and bumped version to 2.2.0.0
