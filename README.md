@@ -30,7 +30,7 @@ group :assets do
   gem 'uglifier', '>= 1.3.0'
 
   # just put after rails asset defaults
-  gem 'twitter-bootswatch-rails', '~> 2.2.2.0'
+  gem 'twitter-bootswatch-rails', '>= 2.2.2.0'
 end
 
 # View Helpers Gem can go outside the assets group
@@ -166,4 +166,4 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
 
 ## Changelog
 
-  - Updated gem and bumped version to 2.2.2.0
+  - Updated gem and bumped version to 2.2.2.1
