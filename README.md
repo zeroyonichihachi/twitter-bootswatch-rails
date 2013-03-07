@@ -23,11 +23,8 @@ Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-boot
 
 ```ruby
 group :assets do
-  gem 'less-rails', '~> 2.2.5'
-  gem 'coffee-rails', '~> 3.2.2'
-
-  gem 'therubyracer', :require => 'v8'
-  gem 'uglifier', '>= 1.3.0'
+  # rails default gems
+  ...
 
   # just put after rails asset defaults
   gem 'twitter-bootswatch-rails', '>= 2.3.1.0'
