@@ -19,7 +19,7 @@ task :bundle do
   sh 'cp vendor/toolkit/twitter/bootstrap/variables.less lib/generators/bootswatch/install/templates/variables.less'
   sh 'gem build *.gemspec'
   sh 'gem install *.gem'
-  sh 'rm *.gem'
+  # sh 'rm *.gem'
 end
 
 task(:default).clear

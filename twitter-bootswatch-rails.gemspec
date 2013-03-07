@@ -6,6 +6,8 @@ Gem::Specification.new do |s|
   s.name        = "twitter-bootswatch-rails"
   s.version     = Twitter::Bootswatch::Rails::VERSION
   s.platform    = Gem::Platform::RUBY
+  s.license     = 'MIT'
+  s.licenses    = ['MIT', 'GPL-2']
   s.authors     = ["Scott V. Rosenthal"]
   s.email       = ["sr7575@gmail.com"]
   s.homepage    = "https://github.com/scottvrosenthal/twitter-bootswatch-rails"

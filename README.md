@@ -30,7 +30,7 @@ group :assets do
   gem 'uglifier', '>= 1.3.0'
 
   # just put after rails asset defaults
-  gem 'twitter-bootswatch-rails', '>= 2.3.0.0'
+  gem 'twitter-bootswatch-rails', '>= 2.3.1.0'
 end
 
 # View Helpers Gem can go outside the assets group
@@ -165,5 +165,5 @@ As per the Bootstrap project we don't include the responsive styles by default. 
 Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring CSS components (see breaking change 2.0.4 -> 2.1.0). Since many people using bootstrap-swatch-rails *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to bootstrap-swatch-rails will therefore have version numbers of the form `2.x.x.y`, where `2.x.x` is the release of Bootstrap we should be compatible with, and `y` is the patch version.
 
 ## Changelog
-
+  - Updated gem and bumped version to 2.3.1.0
   - Updated gem and bumped version to 2.3.0.0
