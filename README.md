@@ -166,4 +166,3 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
 
 ## Changelog
   - Updated gem and bumped version to 2.3.1.0
-  - Updated gem and bumped version to 2.3.0.0
