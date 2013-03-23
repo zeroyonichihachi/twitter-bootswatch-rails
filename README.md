@@ -27,11 +27,11 @@ group :assets do
   ...
 
   # just put after rails asset defaults
-  gem 'twitter-bootswatch-rails', '>= 2.3.1.0'
+  gem 'twitter-bootswatch-rails', '>= 2.3.1'
 end
 
 # View Helpers Gem can go outside the assets group
-gem 'twitter-bootswatch-rails-helpers'
+gem 'twitter-bootswatch-rails-helpers', '>= 2.3.1'
 ```
 
 or you can install from latest build;
