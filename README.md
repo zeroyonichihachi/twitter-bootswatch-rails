@@ -4,7 +4,7 @@
   - Easy control over which javascript and less modules are loaded by default. Not every app needs a carousel.
   - Simple default less files for custom application themes ("bootswatch/variables.less" and "bootswatch/bootswatch.less"). 
   - Easily apply different custom themes or bootswatches from a site like [Bootswatch](http://bootswatch.com/).
-  - Create several themed swatches for your project with theme_names.  You can have and admin and site using namespaced theme_names.
+  - Create several themed swatches for your project with theme_names, (e.g. admin theme and site theme using namespaced theme_names).
   - Gem version semantics extend Twitter Bootstrap version semantics, making it simple to know what version of bootstrap the gem is using.
 
 ## Twitter Bootstrap for Rails 3.1+ Asset Pipeline
