@@ -3,7 +3,8 @@
   - Integrates Twitter Bootstrap CSS toolkit for the Rails 3.1+ Asset Pipeline.
   - Easy control over which javascript and less modules are loaded by default. Not every app needs a carousel.
   - Simple default less files for custom application themes ("bootswatch/variables.less" and "bootswatch/bootswatch.less"). 
-  - Easily apply custom themes or bootswatches from a site like [Bootswatch](http://bootswatch.com/).
+  - Easily apply different custom themes or bootswatches from a site like [Bootswatch](http://bootswatch.com/).
+  - Create several themed swatches for your project with theme_names.  You can have and admin and site using namespaced theme_names.
   - Gem version semantics extend Twitter Bootstrap version semantics, making it simple to know what version of bootstrap the gem is using.
 
 ## Twitter Bootstrap for Rails 3.1+ Asset Pipeline
@@ -27,7 +28,7 @@ group :assets do
   ...
 
   # just put after rails asset defaults
-  gem 'twitter-bootswatch-rails', '>= 2.3.1.0'
+  gem 'twitter-bootswatch-rails', '~= 2.3.1.0'
 end
 
 # View Helpers Gem can go outside the assets group
@@ -56,23 +57,28 @@ Install (requires directives to Asset pipeline.)
 Usage:
 
 
-    rails g bootswatch:install
+    rails g bootswatch:install [theme_name]
 
+Example:
+
+
+    rails g bootswatch:install admin
+    rails g bootswatch:install cyborg
 
 Layout (generates a basic Twitter Bootstrap compatible layout) - ([haml-rails](https://github.com/indirect/haml-rails) gem supported)
-
 
 
 Usage:
 
 
-    rails g bootswatch:layout
+    rails g bootswatch:layout [theme_name]
 
 
 Example:
 
 
-    rails g bootswatch:layout application
+    rails g bootswatch:layout admin
+    rails g bootswatch:layout cyborg
 
 
 Themed (generates Twitter Bootstrap compatible scaffold views.) - ([simple_form](https://github.com/plataformatec/simple_form) and [haml-rails](https://github.com/indirect/haml-rails) gems supported)
@@ -162,4 +168,8 @@ As per the Bootstrap project we don't include the responsive styles by default. 
 Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring CSS components (see breaking change 2.0.4 -> 2.1.0). Since many people using bootstrap-swatch-rails *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to bootstrap-swatch-rails will therefore have version numbers of the form `2.x.x.y`, where `2.x.x` is the release of Bootstrap we should be compatible with, and `y` is the patch version.
 
 ## Changelog
-  - Updated gem and bumped version to 2.3.1.0
+  - v2.3.1.0
+    * Updated to bootstrap 2.3.1
+  - v2.3.1.1
+    * Added theme_name functionality, if a theme_name isn't passed in you get the default install
+    * Included bootstrap version number at the top of each asset file created by generators

@@ -1,0 +1,4 @@
+/* <%= config[:theme_info] %>
+ *= require_self
+ *= require <%= config[:theme_name] %>/loader
+*/

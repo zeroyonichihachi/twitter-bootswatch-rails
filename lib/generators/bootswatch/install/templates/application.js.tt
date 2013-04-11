@@ -1,0 +1,4 @@
+// <%= config[:theme_info] %>
+//= require jquery
+//= require jquery_ujs
+//= require <%= config[:theme_name] %>/loader

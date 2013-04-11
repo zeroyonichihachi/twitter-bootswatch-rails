@@ -1,11 +1,12 @@
+// <%= config[:theme_info] %>
 // loader.less
 // customize the modules loaded here
 <%
 config[:less_imports].map{|item| item.gsub(/.less/, '')}.each do |less_file|
 %>@import "twitter/bootstrap/<%= less_file %>";
-<% if less_file == 'variables' %>@import "bootswatch/<%= less_file %>";
+<% if less_file == 'variables' %>@import "<%= config[:theme_name] %>/<%= less_file %>";
 <% end %><% end %>
 
 // @import "twitter/bootstrap/responsive";
 
-@import "bootswatch/bootswatch";
+@import "<%= config[:theme_name] %>/bootswatch";

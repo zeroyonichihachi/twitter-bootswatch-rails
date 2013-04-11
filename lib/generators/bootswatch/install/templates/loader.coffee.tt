@@ -1,3 +1,4 @@
+# <%= config[:theme_info] %>
 # loader.coffee
 
 <%
@@ -20,4 +21,4 @@ js_files.each do |js_file|
 %>#= require twitter/bootstrap/<%= js_file %>
 <% end %>
 
-#= require bootswatch/bootswatch
+#= require <%= config[:theme_name] %>/bootswatch
