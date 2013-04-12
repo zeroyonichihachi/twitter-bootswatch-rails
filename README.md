@@ -207,5 +207,5 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
     * Included bootstrap version number at the top of each asset file created by generators
     * Added Font Awesome to the asset pipeline as an opt in using an asset directive
     * Added import generator to dynamically pull in free bootswatch.com themes and add correct import directives
-  - v2.3.1.2
+  - v2.3.1.2 (master only)
     * Updated gemspec to thor >= 0.18
