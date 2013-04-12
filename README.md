@@ -1,6 +1,6 @@
 # Twitter Bootswatch Rails gem
   
-  - Integrates Twitter Bootstrap CSS toolkit for the Rails 3.1+ Asset Pipeline.
+  - Integrates Twitter Bootstrap CSS & FontAwesome toolkit into the Rails 3.1+ Asset Pipeline.
   - Easy control over which javascript and less modules are loaded by default. Not every app needs a carousel.
   - Simple default less files for custom application themes ("bootswatch/variables.less" and "bootswatch/bootswatch.less"). 
   - Easily apply different custom themes or bootswatches from a site like [Bootswatch](http://bootswatch.com/).
@@ -28,7 +28,7 @@ group :assets do
   ...
 
   # just put after rails asset defaults
-  gem 'twitter-bootswatch-rails', '~= 2.3.1.0'
+  gem 'twitter-bootswatch-rails', '~= 2.3.1.1'
 
 end
 
@@ -49,7 +49,7 @@ Run bundle from command line
 
 ## Installing to App (using Generators)
 
-You can run the following generators to get started with Twitter Bootswatch quickly.
+You can run the following generators to get started with Twitter Bootswatch & FontAwesome quickly.
 
 
 Install (requires directives to Asset pipeline.)
@@ -98,7 +98,26 @@ Example:
     rake db:migrate
     rails g bootswatch:themed Posts
 
+## Import a free [Bootswatch](http://bootswatch.com/) theme
 
+### Just follow these steps
+
+    rails g bootswatch:install cyborg
+    rails g bootswatch:import cyborg
+    rails g bootswatch:layout cyborg
+
+The above creates a namespaced theme under assets/javascript/cyborg assets/stylesheets/cyborg and a new layout file.
+
+The import generator pulls directly from the [Bootswatch](http://bootswatch.com/) git repo [cyborg](https://github.com/thomaspark/bootswatch/tree/gh-pages/cyborg) directory.
+
+* bootswatch.less
+* variables.less
+
+In your rails controllers just tell it to use the cyborg layout.
+
+    layout: 'cyborg'
+
+Need more examples? Check out the [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo)
 
 ## Using less-rails gem
 
@@ -112,6 +131,7 @@ You have to require "bootswatch/loader.css.less" in your application.css
 /*
  *= require_self
  *= require bootswatch/loader
+ *= require font-awesome/font-awesome
 */
 ```
 
@@ -174,3 +194,5 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
   - v2.3.1.1
     * Added theme_name functionality, if a theme_name isn't passed in you get the default install
     * Included bootstrap version number at the top of each asset file created by generators
+    * Added FontAwesome to the asset pipeline as an opt in using an asset directive
+    * Added import generator to dynamically pull in free bootswatch.com themes and add correct import directives
