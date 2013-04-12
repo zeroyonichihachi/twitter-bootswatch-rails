@@ -11,8 +11,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Scott V. Rosenthal"]
   s.email       = ["sr7575@gmail.com"]
   s.homepage    = "https://github.com/scottvrosenthal/twitter-bootswatch-rails"
-  s.summary     = %q{Twitter Bootstrap CSS toolkit for Rails 3.1+ Asset Pipeline with less-rails (no fluff - core only)}
-  s.description = %q{twitter-bootswatch-rails project integrates Bootstrap CSS toolkit for Rails 3.1+ Asset Pipeline with less-rails and allows you to easily cherry pick and customize for your app}
+  s.summary     = %q{Twitter Bootstrap CSS & FontAwesome toolkit for Rails 3.1+ Asset Pipeline with less-rails (no fluff - core only)}
+  s.description = %q{twitter-bootswatch-rails project integrates Bootstrap CSS & FontAwesome toolkit for Rails 3.1+ Asset Pipeline with less-rails and allows you to easily cherry pick and customize a theme for your app}
 
   s.rubyforge_project = "twitter-bootswatch-rails"
   s.files = Dir["lib/**/*"] + Dir["vendor/**/*"] + Dir["app/**/*"] + ["Rakefile", "README.md"]
@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency             'railties',   '>= 3.1'
   s.add_dependency             'actionpack', '>= 3.1'
-  s.add_dependency             'thor', '>= 0.15'
+  s.add_dependency             'thor', '>= 0.18'
   
   s.add_runtime_dependency 'less-rails', '>= 2.3'
   s.add_runtime_dependency 'execjs', '>= 1.4.0'
