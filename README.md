@@ -1,6 +1,6 @@
 # Twitter Bootswatch Rails gem
   
-  - Integrates Twitter Bootstrap CSS & FontAwesome toolkit into the Rails 3.1+ Asset Pipeline.
+  - Integrates Twitter Bootstrap CSS & Font Awesome toolkit into the Rails 3.1+ Asset Pipeline.
   - Easy control over which javascript and less modules are loaded by default. Not every app needs a carousel.
   - Simple default less files for custom application themes ("bootswatch/variables.less" and "bootswatch/bootswatch.less"). 
   - Easily apply different custom themes or bootswatches from a site like [Bootswatch](http://bootswatch.com/).
@@ -194,5 +194,7 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
   - v2.3.1.1
     * Added theme_name functionality, if a theme_name isn't passed in you get the default install
     * Included bootstrap version number at the top of each asset file created by generators
-    * Added FontAwesome to the asset pipeline as an opt in using an asset directive
+    * Added Font Awesome to the asset pipeline as an opt in using an asset directive
     * Added import generator to dynamically pull in free bootswatch.com themes and add correct import directives
+  - v2.3.1.2
+    * Updated gemspec to thor >= 0.18
