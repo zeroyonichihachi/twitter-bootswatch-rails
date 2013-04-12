@@ -126,7 +126,7 @@ Need more examples? Check out the [demo](https://github.com/scottvrosenthal/twit
 
 ## Using less-rails gem
 
-Read up on the [less-rails](https://github.com/metaskills/less-rails/) gem.
+
 
 ## Using stylesheets with Less
 
@@ -149,6 +149,26 @@ For instance, as per the Bootstrap project we don't include the responsive style
 "bootswatch/bootswatch.less" customize the style of Twitter Bootstrap base css and component style here.
 
 Check out some of the swatches at [Bootswatch](http://bootswatch.com/)
+
+Read up on the [less-rails](https://github.com/metaskills/less-rails/) gem.
+
+#### base.less
+
+When importing a custom bootswatch.less file manually you'll need to include the following import directive at the top of the file:
+
+```css
+@import "base";
+```
+
+The import base.less directive allows the importing less file to access and override inherited less variables.
+
+Example:
+
+```css
+@import "base";
+// Cyborg 2.3.1
+// bootswatch.less
+```
 
 ## Using Javascripts
 
