@@ -10,6 +10,9 @@
 ## Twitter Bootstrap for Rails 3.1+ Asset Pipeline
 [Twitter Bootstrap](http://twitter.github.com/bootstrap/index.html) is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
 
+## Font Awesome for Rails 3.1+ Asset Pipeline
+[Font Awesome](http://fortawesome.github.io/Font-Awesome) is a toolkit with iconic fonts designed for use with Twitter Bootstrap.
+
 ## Demo
 
 The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) will show you how this gem can be used.
