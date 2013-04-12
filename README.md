@@ -71,6 +71,8 @@ Example:
     rails g bootswatch:install admin
     rails g bootswatch:install storefront
 
+***
+
 Layout (generates a basic Twitter Bootstrap compatible layout) - ([haml-rails](https://github.com/indirect/haml-rails) gem supported)
 
 
@@ -86,6 +88,7 @@ Example:
     rails g bootswatch:layout admin
     rails g bootswatch:layout storefront
 
+***
 
 Themed (generates Twitter Bootstrap compatible scaffold views.) - ([simple_form](https://github.com/plataformatec/simple_form) and [haml-rails](https://github.com/indirect/haml-rails) gems supported)
 
