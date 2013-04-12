@@ -4,7 +4,7 @@
   - Easy control over which javascript and less modules are loaded by default. Not every app needs a carousel.
   - Simple default less files for custom application themes ("bootswatch/variables.less" and "bootswatch/bootswatch.less"). 
   - Easily apply different custom themes or bootswatches from a site like [Bootswatch](http://bootswatch.com/).
-  - Create several themed swatches for your project with theme_names, (e.g. an admin theme and a site theme using namespaced theme_names).
+  - Create several themed swatches for your project with theme_names, (e.g. an admin theme and a storefront theme using namespaced theme_names).
   - Gem version semantics extend Twitter Bootstrap version semantics, making it simple to know what version of bootstrap the gem is using.
 
 ## Includes Twitter Bootstrap for Rails 3.1+ Asset Pipeline
@@ -69,7 +69,7 @@ Example:
 
 
     rails g bootswatch:install admin
-    rails g bootswatch:install cyborg
+    rails g bootswatch:install storefront
 
 Layout (generates a basic Twitter Bootstrap compatible layout) - ([haml-rails](https://github.com/indirect/haml-rails) gem supported)
 
@@ -84,7 +84,7 @@ Example:
 
 
     rails g bootswatch:layout admin
-    rails g bootswatch:layout cyborg
+    rails g bootswatch:layout storefront
 
 
 Themed (generates Twitter Bootstrap compatible scaffold views.) - ([simple_form](https://github.com/plataformatec/simple_form) and [haml-rails](https://github.com/indirect/haml-rails) gems supported)
