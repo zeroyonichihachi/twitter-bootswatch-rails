@@ -1,11 +1,11 @@
 # Twitter Bootswatch Rails gem
   
-  - Integrates Twitter Bootstrap CSS & Font Awesome toolkit into the Rails 3.1+ Asset Pipeline.
-  - Easy control over which javascript and less modules are loaded by default. Not every app needs a carousel.
-  - Simple default less files for custom application themes ("bootswatch/variables.less" and "bootswatch/bootswatch.less"). 
-  - Easily apply different custom themes or bootswatches from a site like [Bootswatch](http://bootswatch.com/).
-  - Create several themed swatches for your project with theme_names, (e.g. an admin theme and a storefront theme using namespaced theme_names).
-  - Gem version semantics extend Twitter Bootstrap version semantics, making it simple to know what version of bootstrap the gem is using.
+  - Integrates Twitter Bootstrap CSS & Font Awesome toolkit into the Rails 3.1+ Asset Pipeline
+  - Easy control over which javascript and less modules are loaded by default. Not every app needs a carousel
+  - Simple default less files for custom application themes ("[theme_name]/variables.less" and "[theme_name]/bootswatch.less")
+  - Easily apply different custom themes or bootswatches from a site like [bootswatch.com](http://bootswatch.com/)
+  - Create several themed swatches for your project with theme_names, (e.g. an admin theme and a storefront theme using namespaced theme_names)
+  - Gem version semantics extend Twitter Bootstrap version semantics, making it simple to know what version of bootstrap the gem is using
 
 ## Includes Twitter Bootstrap for Rails 3.1+ Asset Pipeline
 [Twitter Bootstrap](http://twitter.github.com/bootstrap/index.html) is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
@@ -54,10 +54,10 @@ Run bundle from command line
 
 ## Installing to App (using Generators)
 
-You can run the following generators to get started with Twitter Bootswatch & Font Awesome quickly.
+You can run the following generators to get started with Twitter Bootstrap & Font Awesome quickly.
 
 
-[theme_name] defaults to *bootswatch* if you don't provide one.
+If you don't provide a [theme_name] the value defaults to **bootswatch** and adds directives to your application.css and application.js files.
 
 
 Usage:
@@ -103,7 +103,7 @@ Example:
     rake db:migrate
     rails g bootswatch:themed Posts
 
-## Import a free [Bootswatch.com](http://bootswatch.com/) theme
+## Import a free [bootswatch.com](http://bootswatch.com/) theme
 
 ### Just follow these 3 steps in order :)
 
