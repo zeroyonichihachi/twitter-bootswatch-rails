@@ -15,7 +15,7 @@
 
 ## Demo
 
-The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) will show you how this gem can be used.
+The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) will show you how this gem can be used in a rails 3.1+ application.
 
 ![Demo Screen Shot](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo/raw/master/demo.png)
 
@@ -23,7 +23,7 @@ The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) wil
 The gem [twitter-bootswatch-rails-helpers](https://github.com/scottvrosenthal/twitter-bootswatch-rails-helpers) provides rails view helpers for twitter bootstrap's breadcrumbs and alerts components.
 
 
-## Installing Gem
+## Install
 
 Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-rails) in Gemfile to install it from [RubyGems.org](http://rubygems.org):
 
