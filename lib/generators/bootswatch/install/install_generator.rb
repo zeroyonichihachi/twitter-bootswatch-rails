@@ -43,6 +43,13 @@ module Bootswatch
                              " *= require #{theme_name}/loader\n",
                              :after => "require_self\n"
             end
+
+            unless File.read('app/assets/stylesheets/application.css').include?('font-awesome')
+              insert_into_file "app/assets/stylesheets/application.css",
+                             " *= require font-awesome/font-awesome\n",
+                             :after => "*= require #{theme_name}/loader\n"
+            end
+
           else
             template 'application.css.tt', 'app/assets/stylesheets/application.css', {theme_name: theme_name, theme_info: theme_info}
           end
@@ -76,6 +83,10 @@ module Bootswatch
 
         less_imports = File.read(find_in_source_paths('bootstrap.less')).scan(Less::Rails::ImportProcessor::IMPORT_SCANNER).flatten.compact.uniq
 
+        # let's auto backup if a custom loader.css.less already exists
+        if File.exist?(File.join(stylesheets_dest_path,'loader.css.less'))
+          File.rename(File.join(stylesheets_dest_path,'loader.css.less'), File.join(stylesheets_dest_path,'loader.css.less_bak'))
+        end
         template 'loader.css.less.tt', File.join(stylesheets_dest_path,'loader.css.less'), {less_imports: less_imports, theme_name: theme_name, theme_info: theme_info}
 
         # let's auto backup if a custom variables.less already exists
@@ -84,11 +95,23 @@ module Bootswatch
         end
         template 'variables.less.tt', File.join(stylesheets_dest_path,'variables.less'), {theme_name: theme_name, theme_info: theme_info}
 
+        # let's auto backup if a custom mixins.less already exists
+        if File.exist?(File.join(stylesheets_dest_path,'mixins.less'))
+          File.rename(File.join(stylesheets_dest_path,'mixins.less'), File.join(stylesheets_dest_path,'mixins.less_bak'))
+        end
+        template 'mixins.less.tt', File.join(stylesheets_dest_path,'mixins.less'), {theme_name: theme_name, theme_info: theme_info}
+
         # let's auto backup if a custom bootswatch.less already exists
         if File.exist?(File.join(stylesheets_dest_path,'bootswatch.less'))
           File.rename(File.join(stylesheets_dest_path,'bootswatch.less'), File.join(stylesheets_dest_path,'bootswatch.less_bak'))
         end
         template 'bootswatch.less.tt', File.join(stylesheets_dest_path,'bootswatch.less'), {theme_name: theme_name, theme_info: theme_info}
+
+        # let's auto backup if a custom base.less already exists
+        if File.exist?(File.join(stylesheets_dest_path,'base.less'))
+          File.rename(File.join(stylesheets_dest_path,'base.less'), File.join(stylesheets_dest_path,'base.less_bak'))
+        end
+        template 'base.less.tt', File.join(stylesheets_dest_path,'base.less'), {theme_name: theme_name, theme_info: theme_info}
 
       end
 
