@@ -7,10 +7,10 @@
   - Create several themed swatches for your project with theme_names, (e.g. an admin theme and a site theme using namespaced theme_names).
   - Gem version semantics extend Twitter Bootstrap version semantics, making it simple to know what version of bootstrap the gem is using.
 
-## Twitter Bootstrap for Rails 3.1+ Asset Pipeline
+## Includes Twitter Bootstrap for Rails 3.1+ Asset Pipeline
 [Twitter Bootstrap](http://twitter.github.com/bootstrap/index.html) is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
 
-## Font Awesome for Rails 3.1+ Asset Pipeline
+## Includes Font Awesome for Rails 3.1+ Asset Pipeline
 [Font Awesome](http://fortawesome.github.io/Font-Awesome) is a toolkit with iconic fonts designed for use with Twitter Bootstrap.
 
 ## Demo
