@@ -103,7 +103,7 @@ Example:
     rake db:migrate
     rails g bootswatch:themed Posts
 
-## Import a free [Bootswatch](http://bootswatch.com/) theme
+## Import a free [Bootswatch.com](http://bootswatch.com/) theme
 
 ### Just follow these 3 steps in order :)
 
@@ -124,11 +124,7 @@ In your rails controllers just tell it to use the cyborg layout.
 
 Need more examples? Check out the [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo)
 
-## Using less-rails gem
-
-
-
-## Using stylesheets with Less
+## Using stylesheets with [less-rails](https://github.com/metaskills/less-rails/) gem
 
 You have to require "bootswatch/loader.css.less" in your application.css
 
