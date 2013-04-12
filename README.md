@@ -54,10 +54,10 @@ Run bundle from command line
 
 ## Installing to App (using Generators)
 
-You can run the following generators to get started with Twitter Bootswatch & FontAwesome quickly.
+You can run the following generators to get started with Twitter Bootswatch & Font Awesome quickly.
 
 
-Install (requires directives to Asset pipeline.)
+[theme_name] defaults to *bootswatch* if you don't provide one.
 
 
 Usage:
@@ -113,7 +113,7 @@ Example:
 
 The above creates a namespaced theme under assets/javascript/cyborg assets/stylesheets/cyborg and a new layout file.
 
-The import generator pulls directly from the [Bootswatch](http://bootswatch.com/) git repo [cyborg](https://github.com/thomaspark/bootswatch/tree/gh-pages/cyborg) directory.
+The import generator pulls directly from the [bootswatch.com](http://bootswatch.com/) git repo [cyborg](https://github.com/thomaspark/bootswatch/tree/gh-pages/cyborg) directory.
 
 * bootswatch.less
 * variables.less
@@ -124,27 +124,27 @@ In your rails controllers just tell it to use the cyborg layout.
 
 Need more examples? Check out the [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo)
 
-## Using stylesheets with [less-rails](https://github.com/metaskills/less-rails/) gem
+## Using stylesheets with the [less-rails](https://github.com/metaskills/less-rails/) gem
 
-You have to require "bootswatch/loader.css.less" in your application.css
+You have to require "[theme_name]/loader.css.less" in your application.css
 
 ```css
 /*
  *= require_self
- *= require bootswatch/loader
+ *= require [theme_name]/loader
  *= require font-awesome/font-awesome
 */
 ```
 
-"bootswatch/loader.css.less" allows you to easily comment out less modules you don't need in your application.
+"[theme_name]/loader.css.less" allows you to easily comment out less modules you don't need in your application.
 
-For instance, as per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "bootswatch/loader.css.less" to enable it.
+For instance, as per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "[theme_name]/loader.css.less" to enable it.
 
-"bootswatch/variables.less" customize Twitter Bootstrap "variables.less" defaults in this file.
+"[theme_name]/variables.less" customize Twitter Bootstrap "variables.less" defaults in this file.
 
-"bootswatch/bootswatch.less" customize the style of Twitter Bootstrap base css and component style here.
+"[theme_name]/bootswatch.less" customize the style of Twitter Bootstrap base css and component style here.
 
-Check out some of the swatches at [Bootswatch](http://bootswatch.com/)
+Check out some of the swatches at [bootswatch.com](http://bootswatch.com/)
 
 Read up on the [less-rails](https://github.com/metaskills/less-rails/) gem.
 
@@ -168,18 +168,18 @@ Example:
 
 ## Using Javascripts
 
-You have to require the coffeescript file "bootswatch/loader.coffee" in your application.js:
+You have to require the coffeescript file "[theme_name]/loader.coffee" in your application.js:
 
 ```javascript
 //= require jquery
 //= require jquery_ujs
-//= require bootswatch/loader
+//= require [theme_name]/loader
 ```
 
-"bootswatch/loader.coffee" allows you to easily comment out modules you don't need in your application:
+"[theme_name]/loader.coffee" allows you to easily comment out modules you don't need in your application:
 
 ```coffee
-# bootswatch/loader.coffee
+# [theme_name]/loader.coffee
 
 #= require twitter/bootstrap/bootstrap-transition
 #= require twitter/bootstrap/bootstrap-alert
@@ -196,15 +196,15 @@ You have to require the coffeescript file "bootswatch/loader.coffee" in your app
 #= require twitter/bootstrap/bootstrap-affix
 
 
-#= require bootswatch/bootswatch
+#= require [theme_name]/bootswatch
 ```
 
-"bootswatch/bootswatch.coffee" allows you to easily add swatch customization to javascript modules loaded:
+"[theme_name]/bootswatch.coffee" allows you to easily add swatch customization to javascript modules loaded:
 
-Check out some of the swatches at [Bootswatch](http://bootswatch.com/)
+Check out some of the swatches at [bootswatch.com](http://bootswatch.com/)
 
 ### Responsive styling?
-As per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "bootswatch/loader.less" to enable it.
+As per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "[theme_name]/loader.css.less" to enable it.
 
 ### Local rails development assets not updating?
 
@@ -219,7 +219,7 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
   - v2.3.1.0
     * Updated to bootstrap 2.3.1
   - v2.3.1.1
-    * Added theme_name functionality, if a theme_name isn't passed in you get the default install
+    * Added theme_name functionality, if a theme_name isn't passed in you get the default install, i.e, uses bootswatch as theme_name
     * Included bootstrap version number at the top of each asset file created by generators
     * Added Font Awesome to the asset pipeline as an opt in using an asset directive
     * Added import generator to dynamically pull in free bootswatch.com themes and add correct import directives
