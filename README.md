@@ -138,7 +138,7 @@ You have to require "[theme_name]/loader.css.less" in your application.css
 
 "[theme_name]/loader.css.less" allows you to easily comment out less modules you don't need in your application.
 
-For instance, as per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "[theme_name]/loader.css.less" to enable it.
+For instance, as per the [Twitter Bootstrap](http://twitter.github.io/bootstrap/scaffolding.html#responsive) project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "[theme_name]/loader.css.less" to enable it.
 
 "[theme_name]/variables.less" customize Twitter Bootstrap "variables.less" defaults in this file.
 
@@ -204,7 +204,7 @@ You have to require the coffeescript file "[theme_name]/loader.coffee" in your a
 Check out some of the swatches at [bootswatch.com](http://bootswatch.com/)
 
 ### Responsive styling?
-As per the Bootstrap project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "[theme_name]/loader.css.less" to enable it.
+As per the [Twitter Bootstrap](http://twitter.github.io/bootstrap/scaffolding.html#responsive) project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "[theme_name]/loader.css.less" to enable it.
 
 ### Local rails development assets not updating?
 
