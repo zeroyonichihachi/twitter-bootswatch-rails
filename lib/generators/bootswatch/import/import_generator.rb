@@ -8,13 +8,21 @@ module Bootswatch
         file_name
       end
 
+      def theme_directory
+        if class_path.empty?
+          theme_name
+        else
+          class_path.first
+        end
+      end
+
       def theme_repo_url
        "https://raw.github.com/thomaspark/bootswatch/gh-pages/#{theme_name}"
       end
 
       def import_less
 
-        stylesheets_dest_path = "app/assets/stylesheets/#{theme_name}"
+        stylesheets_dest_path = "app/assets/stylesheets/#{theme_directory}"
         empty_directory stylesheets_dest_path
 
         # let's auto backup if a custom variables.less already exists

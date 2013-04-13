@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency             'railties',   '>= 3.1'
   s.add_dependency             'actionpack', '>= 3.1'
-  s.add_dependency             'thor', '>= 0.18'
+  s.add_dependency             'thor', '>= 0.16'
   
   s.add_runtime_dependency 'less-rails', '>= 2.3'
   s.add_runtime_dependency 'execjs', '>= 1.4.0'

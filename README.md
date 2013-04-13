@@ -13,6 +13,25 @@
 ## Includes Font Awesome for Rails 3.1+ Asset Pipeline
 [Font Awesome](http://fortawesome.github.io/Font-Awesome) is a toolkit with iconic fonts designed for use with Twitter Bootstrap.
 
+
+```css
+/*
+ *= require_self
+ *= require [theme_name]/loader
+ *= require font-awesome/font-awesome
+*/
+```
+
+If you need the ie7 fix:
+
+```css
+/*
+ *= require_self
+ *= require [theme_name]/loader
+ *= require font-awesome/font-awesome-ie7
+*/
+```
+
 ## Demo
 
 The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) will show you how this gem can be used in a rails 3.1+ application.
@@ -108,7 +127,7 @@ Example:
 
 ## Import a free [bootswatch.com](http://bootswatch.com/) theme
 
-### Just follow these 3 steps in order :)
+### Just follow these three steps in the following order :)
 
     rails g bootswatch:install cyborg
     rails g bootswatch:import cyborg
@@ -124,6 +143,12 @@ The import generator pulls directly from the [bootswatch.com](http://bootswatch.
 In your rails controllers just tell it to use the cyborg layout.
 
     layout: 'cyborg'
+
+You can also create an admin namespaced theme and import the cyborg bootswatch.less and variable.less files:
+
+    rails g bootswatch:install admin
+    rails g bootswatch:import admin/cyborg
+    rails g bootswatch:layout admin
 
 Need more examples? Check out the [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo)
 
@@ -226,5 +251,7 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
     * Included bootstrap version number at the top of each asset file created by generators
     * Added Font Awesome to the asset pipeline as an opt in using an asset directive
     * Added import generator to dynamically pull in free bootswatch.com themes and add correct import directives
-  - v2.3.1.2 (master only)
-    * Updated gemspec to thor >= 0.18
+  - v2.3.1.2
+    * Updated gemspec docs
+    * Updated import generator to allow importing bootswatch.com themes under existing namespaced themes
+      * rails g bootswatch:import admin/cyborg
