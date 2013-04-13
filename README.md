@@ -176,6 +176,8 @@ Check out some of the swatches at [bootswatch.com](http://bootswatch.com/)
 
 Read up on the [less-rails](https://github.com/metaskills/less-rails/) gem.
 
+***
+
 #### base.less
 
 When importing a custom bootswatch.less file manually you'll need to include the following import directive at the top of the file:
