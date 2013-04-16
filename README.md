@@ -52,7 +52,7 @@ group :assets do
   ...
 
   # just put after rails asset defaults
-  gem 'twitter-bootswatch-rails', '~= 2.3.1.1'
+  gem 'twitter-bootswatch-rails', '~= 2.3.1.2'
 
 end
 
