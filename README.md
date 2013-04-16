@@ -127,6 +127,8 @@ Example:
 
 ## Import a free [bootswatch.com](http://bootswatch.com/) theme
 
+*(only available with twitter-bootswatch-rails v2.3.1.2+)*
+
 ### Just follow these three steps in the following order :)
 
     rails g bootswatch:install cyborg
