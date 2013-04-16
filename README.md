@@ -241,6 +241,9 @@ As per the [Twitter Bootstrap](http://twitter.github.io/bootstrap/scaffolding.ht
 ```sh
 RAILS_ENV=development rake assets:clean
 ```
+### List of Twitter Bootstrap plugins
+
+  - [the-big-badass-list-of-twitter-bootstrap-resources](http://bootstraphero.com/the-big-badass-list-of-twitter-bootstrap-resources)
 
 ## Versioning
 Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring CSS components (see breaking change 2.0.4 -> 2.1.0). Since many people using bootstrap-swatch-rails *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to bootstrap-swatch-rails will therefore have version numbers of the form `2.x.x.y`, where `2.x.x` is the release of Bootstrap we should be compatible with, and `y` is the patch version.
