@@ -32,6 +32,13 @@ If you need the ie7 fix:
 */
 ```
 
+If FontAwesome fonts not showing when deploying, try adding the following line to your config/application.rb:
+
+```ruby
+# Precompile additional assets
+config.assets.precompile += %w( .svg .eot .woff .ttf .otf )
+```
+
 ## Demo
 
 The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) will show you how this gem can be used in a rails 3.1+ application.
