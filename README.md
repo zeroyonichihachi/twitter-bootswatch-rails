@@ -255,7 +255,7 @@ rake assets:clean:all
 
 ### Adding custom assets to the asset pipeline when deploying
 
-In config/application.rb add the themed/named files, e.g., admin.js & admin.css to config.assets.precompile:
+In config/application.rb add the [theme_name] files, e.g., admin.js & admin.css to config.assets.precompile:
 
 ```ruby
 # Precompile additional assets
