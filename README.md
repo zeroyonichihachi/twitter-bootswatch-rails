@@ -264,6 +264,17 @@ config.assets.precompile += %w(admin.js admin.css cyborg.js cyborg.css)
 
 ***
 
+### Default generators to use less-rails gem
+
+In config/application.rb add the following line:
+
+```ruby
+# less-rails gem (default all generators)
+config.app_generators.stylesheet_engine :less
+```
+
+***
+
 ### List of Twitter Bootstrap plugins
 
   - [the-big-badass-list-of-twitter-bootstrap-resources](http://bootstraphero.com/the-big-badass-list-of-twitter-bootstrap-resources)
