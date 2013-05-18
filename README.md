@@ -32,13 +32,6 @@ If you need the ie7 fix:
 */
 ```
 
-If FontAwesome fonts not showing when deploying, try adding the following line to your config/application.rb:
-
-```ruby
-# Precompile additional assets
-config.assets.precompile += %w( .svg .eot .woff .ttf .otf )
-```
-
 ## Demo
 
 The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) will show you how this gem can be used in a rails 3.1+ application.
@@ -248,17 +241,39 @@ You have to require the coffeescript file "[theme_name]/loader.coffee" in your a
 
 Check out some of the swatches at [bootswatch.com](http://bootswatch.com/)
 
-### Responsive styling?
-As per the [Twitter Bootstrap](http://twitter.github.io/bootstrap/scaffolding.html#responsive) project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "[theme_name]/loader.css.less" to enable it.
+***
+
+## Misc
 
 ### Local rails development assets not updating?
 
 ```sh
-RAILS_ENV=development rake assets:clean
+rake assets:clean:all
 ```
+
+***
+
+### Adding custom assets to the asset pipeline when deploying
+
+In config/application.rb add the themed/named files, e.g., admin.js & admin.css to config.assets.precompile:
+
+```ruby
+# Precompile additional assets
+config.assets.precompile += %w(admin.js admin.css cyborg.js cyborg.css)
+```
+
+***
+
 ### List of Twitter Bootstrap plugins
 
   - [the-big-badass-list-of-twitter-bootstrap-resources](http://bootstraphero.com/the-big-badass-list-of-twitter-bootstrap-resources)
+
+***
+
+### Responsive styling?
+As per the [Twitter Bootstrap](http://twitter.github.io/bootstrap/scaffolding.html#responsive) project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "[theme_name]/loader.css.less" to enable it.
+
+***
 
 ## Versioning
 Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring CSS components (see breaking change 2.0.4 -> 2.1.0). Since many people using bootstrap-swatch-rails *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to bootstrap-swatch-rails will therefore have version numbers of the form `2.x.x.y`, where `2.x.x` is the release of Bootstrap we should be compatible with, and `y` is the patch version.
