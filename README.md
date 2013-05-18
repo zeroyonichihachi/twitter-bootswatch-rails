@@ -13,6 +13,7 @@
 ## Includes Font Awesome for Rails 3.1+ Asset Pipeline
 [Font Awesome](http://fortawesome.github.io/Font-Awesome) is a toolkit with iconic fonts designed for use with Twitter Bootstrap.
 
+In application.css or [theme_name] css file just do the following:
 
 ```css
 /*
