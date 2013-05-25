@@ -15,7 +15,7 @@
 
 To add Font Awesome to your bootswatch:
 
-Include the gem [twitter-bootswatch-rails-fontawesome](https://github.com/scottvrosenthal/twitter-bootswatch-rails-awesome)
+Include the gem [twitter-bootswatch-rails-fontawesome](https://github.com/scottvrosenthal/twitter-bootswatch-rails-fontawesome)
 
 ## Demo
 
