@@ -11,7 +11,6 @@ module Twitter
 
             paths = %W[
               #{File.join(config.root, 'vendor', 'toolkit')}
-              #{File.join(config.root, 'app', 'assets', 'stylesheets', 'bootswatch')}
             ]
 
             paths.each do |p|

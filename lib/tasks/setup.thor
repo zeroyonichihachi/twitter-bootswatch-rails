@@ -52,39 +52,4 @@ class Setup < Thor
 
   end
 
-  desc 'fontawesome_update_asset_pipeline', 'make font awesome less files use asset pipeline'
-  def fontawesome_update_less_files_for_asset_pipeline
-
-    # default template
-    gsub_file 'vendor/toolkit/font-awesome/font-awesome.less',
-              '@FontAwesomePath:   "../font";',
-              ''
-
-    gsub_file 'vendor/toolkit/font-awesome/font-awesome.less',
-              'url(\'@{FontAwesomePath}/fontawesome-webfont.eot?v=3.0.1\')',
-              'asset-url("font-awesome/fontawesome-webfont.eot")'
-
-    gsub_file 'vendor/toolkit/font-awesome/font-awesome.less',
-              'url(\'@{FontAwesomePath}/fontawesome-webfont.eot?#iefix&v=3.0.1\')',
-              'asset-url("font-awesome/fontawesome-webfont.eot")'
-
-    gsub_file 'vendor/toolkit/font-awesome/font-awesome.less',
-              'url(\'@{FontAwesomePath}/fontawesome-webfont.woff?v=3.0.1\')',
-              'asset-url("font-awesome/fontawesome-webfont.woff")'
-
-    gsub_file 'vendor/toolkit/font-awesome/font-awesome.less',
-              'url(\'@{FontAwesomePath}/fontawesome-webfont.ttf?v=3.0.1\')',
-              'asset-url("font-awesome/fontawesome-webfont.ttf")'
-
-    gsub_file 'vendor/toolkit/font-awesome/font-awesome.less',
-              'url(\'@{FontAwesomePath}/fontawesome-webfont.svg#fontawesomeregular?v=3.0.1\')',
-              'asset-url("font-awesome/fontawesome-webfont.svg")'
-
-    gsub_file 'vendor/toolkit/font-awesome/font-awesome.less',
-              'url(\'@{FontAwesomePath}/FontAwesome.otf\')',
-              'asset-url("font-awesome/FontAwesome.otf")'
-
-
-  end
-
 end
