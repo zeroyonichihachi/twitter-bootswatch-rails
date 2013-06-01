@@ -289,5 +289,5 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
   - v2.3.2.0 *(breaking changes ~ font-awesome)*
     * Updated to bootstrap 2.3.2
     * Removed/Refactored Font Awesome functionality into separate gem [twitter-bootswatch-rails-fontawesome](https://github.com/scottvrosenthal/twitter-bootswatch-rails-fontawesome)
-  - v2.3.2.1
+  - v2.3.2.2
     * Rails 4 bug fix for generator error
