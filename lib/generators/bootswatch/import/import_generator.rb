@@ -25,17 +25,8 @@ module Bootswatch
         stylesheets_dest_path = "app/assets/stylesheets/#{theme_directory}"
         empty_directory stylesheets_dest_path
 
-        # let's auto backup if a custom variables.less already exists
-        if File.exist?(File.join(stylesheets_dest_path,'variables.less'))
-          File.rename(File.join(stylesheets_dest_path,'variables.less'), File.join(stylesheets_dest_path,'variables.less_bak'))
-        end
-
         get File.join(theme_repo_url,'variables.less'), File.join(stylesheets_dest_path,'variables.less')
 
-        # let's auto backup if a custom bootswatch.less already exists
-        if File.exist?(File.join(stylesheets_dest_path,'bootswatch.less'))
-          File.rename(File.join(stylesheets_dest_path,'bootswatch.less'), File.join(stylesheets_dest_path,'bootswatch.less_bak'))
-        end
 
         get File.join(theme_repo_url,'bootswatch.less'), File.join(stylesheets_dest_path,'bootswatch.less')
 

@@ -1,4 +1,5 @@
 require 'rails/generators'
+require 'less-rails'
 
 module Bootswatch
   module Generators
@@ -21,7 +22,7 @@ module Bootswatch
       end
 
       def theme_info
-        "#{use_default_theme_name? ? 'bootstrap'.capitalize : theme_name.capitalize} #{Twitter::Bootswatch::Rails::VERSION.chop.chop}"
+        "#{use_default_theme_name? ? 'bootstrap'.capitalize : theme_name.capitalize}"
       end
 
       def add_assets
