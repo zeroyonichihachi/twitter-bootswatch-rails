@@ -238,6 +238,23 @@ rake assets:clean:all
 
 ***
 
+### New rails and getting errors less files are not found or loading
+
+*(Make sure you have remove the default require_tree directive from both your application.js & application.css files)*
+
+application.js
+
+```ruby
+//= require_tree .
+```
+
+application.css
+
+```ruby
+ *= require_tree .
+```
+***
+
 ### Adding custom assets to the asset pipeline when deploying
 
 In config/application.rb add the [theme_name] files, e.g., admin.js & admin.css to config.assets.precompile:
