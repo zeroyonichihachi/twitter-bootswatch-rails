@@ -238,7 +238,7 @@ rake assets:clean:all
 
 ***
 
-### Getting errors less files are not found or loading for new rails application
+### Less files are not found or loading errors for new rails application
 
 *(Remove the default require_tree directive from both the application.js & application.css files)*
 
