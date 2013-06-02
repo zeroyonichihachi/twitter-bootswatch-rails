@@ -243,12 +243,12 @@ rake assets:clean:all
 *(Remove the default require_tree directive line from both the application.js & application.css files)*
 
 ```ruby
-// application.js
+// remove the following line from application.js
 //= require_tree .
 ```
 
 ```ruby
-* application.css
+* remove the following line from application.css
 *= require_tree .
 ```
 ***
