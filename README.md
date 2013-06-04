@@ -32,17 +32,16 @@ The gem [twitter-bootswatch-rails-helpers](https://github.com/scottvrosenthal/tw
 Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-rails) in Gemfile to install it from [RubyGems.org](http://rubygems.org):
 
 ```ruby
-group :assets do
-  # rails default gems
-  ...
 
-  # just put after rails asset defaults
-  gem 'twitter-bootswatch-rails'
-  gem 'twitter-bootswatch-rails-fontawesome'
-end
+# twitter bootstrap css & javascript toolkit
+gem 'twitter-bootswatch-rails'
 
-# View Helpers Gem can go outside the assets group
+# font awesome extension gem
+gem 'twitter-bootswatch-rails-fontawesome'
+
+# twitter bootstrap helpers gem, e.g., alerts etc...
 gem 'twitter-bootswatch-rails-helpers'
+
 ```
 
 or you can install from latest build;
