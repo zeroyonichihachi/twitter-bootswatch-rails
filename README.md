@@ -76,8 +76,10 @@ Example:
 
 ***
 
-Layout (generates a basic Twitter Bootstrap compatible layout) - ([haml-rails](https://github.com/indirect/haml-rails) gem supported)
+Layout (generates a basic Twitter Bootstrap compatible layout)
 
+  - [haml-rails](https://github.com/indirect/haml-rails) gem supported
+  - [slim-rails](https://github.com/slim-template/slim-rails) gem supported
 
 Usage:
 
@@ -93,7 +95,11 @@ Example:
 
 ***
 
-Themed (generates Twitter Bootstrap compatible scaffold views.) - ([simple_form](https://github.com/plataformatec/simple_form) and [haml-rails](https://github.com/indirect/haml-rails) gems supported)
+Themed (generates Twitter Bootstrap compatible scaffold views.)
+
+  - [simple_form](https://github.com/plataformatec/simple_form) gem supported
+  - [haml-rails](https://github.com/indirect/haml-rails) gem supported
+  - [slim-rails](https://github.com/slim-template/slim-rails) gem supported
 
 
 Usage (model and table must already exist):
@@ -305,3 +311,5 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
     * Removed/Refactored Font Awesome functionality into separate gem [twitter-bootswatch-rails-fontawesome](https://github.com/scottvrosenthal/twitter-bootswatch-rails-fontawesome)
   - v2.3.2.2
     * Rails 4 bug fix for generator error
+  - v2.3.2.3
+    * Slim functionality added
