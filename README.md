@@ -238,7 +238,11 @@ Check out some of the swatches at [bootswatch.com](http://bootswatch.com/)
 ### Local rails development assets not updating?
 
 ```sh
-RAILS_ENV=development rake assets:clean:all
+# Rails 3
+RAILS_ENV=development rake assets:clean
+
+# Rails 4
+rake assets:clobber
 ```
 
 ***
