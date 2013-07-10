@@ -1,5 +1,7 @@
 # Twitter Bootswatch Rails gem
 
+[![Build Status](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails.png?branch=master)](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails)
+
   - Integrates Twitter Bootstrap CSS into the Rails 3.1+ Asset Pipeline
   - Easy control over which javascript and less modules are loaded by default. Not every app needs a carousel
   - Simple default less files for custom application themes ("[theme_name]/variables.less" and "[theme_name]/bootswatch.less")
