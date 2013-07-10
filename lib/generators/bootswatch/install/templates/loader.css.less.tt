@@ -18,5 +18,3 @@ end
 %>
 
 // @import "twitter/bootstrap/responsive";
-
-@import "<%= config[:theme_name] %>/bootswatch";

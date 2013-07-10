@@ -142,7 +142,7 @@ class ApplicationController < ActionController::Base
 end
 ```
 
-You can also create an admin namespaced theme and import the cyborg bootswatch.less and variable.less files:
+You can also create an admin namespaced theme and import the cyborg `bootswatch.less` and `variable.less` files:
 
     rails g bootswatch:install admin
     rails g bootswatch:import admin/cyborg
@@ -152,23 +152,24 @@ Need more examples? Check out the [demo](https://github.com/scottvrosenthal/twit
 
 ## Using stylesheets with the [less-rails](https://github.com/metaskills/less-rails/) gem
 
-You have to require "[theme_name]/loader.css.less" in your application.css
+You have to require `[theme_name]/loader.css.less` in your application.css
 
 ```css
 /*
  *= require_self
  *= require [theme_name]/loader
+ *= require [theme_name]/bootswatch
  *= require font-awesome/font-awesome
 */
 ```
 
-"[theme_name]/loader.css.less" allows you to easily comment out less modules you don't need in your application.
+`[theme_name]/loader.css.less` allows you to easily comment out less modules you don't need in your application.
 
 For instance, as per the [Twitter Bootstrap](http://twitter.github.io/bootstrap/scaffolding.html#responsive) project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "[theme_name]/loader.css.less" to enable it.
 
-"[theme_name]/variables.less" customize Twitter Bootstrap "variables.less" defaults in this file.
+`[theme_name]/variables.less` customize Twitter Bootstrap "variables.less" defaults in this file.
 
-"[theme_name]/bootswatch.less" customize the style of Twitter Bootstrap base css and component style here.
+`[theme_name]/bootswatch.css.less` customize the style of Twitter Bootstrap base css and component style here.
 
 Check out some of the swatches at [bootswatch.com](http://bootswatch.com/)
 
@@ -178,30 +179,31 @@ Read up on the [less-rails](https://github.com/metaskills/less-rails/) gem.
 
 #### base.less
 
-When importing a custom bootswatch.less file manually you'll need to include the following import directive at the top of the file:
+When importing a custom `[theme_name]/bootswatch.css.less` file manually you'll need to include the following import directive at the top of the file:
 
 ```css
-@import "base";
+@import "[theme_name]/base";
 ```
 
-The import base.less directive allows the importing less file to access and override inherited less variables.
+The import `[theme_name]/base.less` directive allows the importing less file to access and override inherited less variables.
 
 Example:
 
 ```css
-@import "base";
-// Cyborg 2.3.1
-// bootswatch.less
+@import "cyborg/base";
+// Cyborg
+// bootswatch.css.less
 ```
 
 ## Using Javascripts
 
-You have to require the coffeescript file "[theme_name]/loader.coffee" in your application.js:
+You have to require the coffee script file `[theme_name]/loader.coffee` & `[theme_name]/bootswatch.js.coffee` in your application.js:
 
 ```javascript
 //= require jquery
 //= require jquery_ujs
 //= require [theme_name]/loader
+//= require [theme_name]/bootswatch
 ```
 
 "[theme_name]/loader.coffee" allows you to easily comment out modules you don't need in your application:
@@ -223,11 +225,9 @@ You have to require the coffeescript file "[theme_name]/loader.coffee" in your a
 #= require twitter/bootstrap/bootstrap-typeahead
 #= require twitter/bootstrap/bootstrap-affix
 
-
-#= require [theme_name]/bootswatch
 ```
 
-"[theme_name]/bootswatch.coffee" allows you to easily add swatch customization to javascript modules loaded:
+`[theme_name]/bootswatch.js.coffee` allows you to easily add swatch customization to javascript modules loaded:
 
 Check out some of the swatches at [bootswatch.com](http://bootswatch.com/)
 
@@ -260,7 +260,7 @@ RAILS_ENV=development rake assets:clean
 
 ### Adding custom assets to the asset pipeline when deploying
 
-In config/application.rb add the [theme_name] files, e.g., admin.js & admin.css to config.assets.precompile:
+In config/application.rb add the [theme_name] files, e.g., `admin.js` & `admin.css` to config.assets.precompile:
 
 ```ruby
 # Precompile additional assets
@@ -313,3 +313,6 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
     * Rails 4 bug fix for generator error
   - v2.3.2.3
     * Slim functionality added
+  - v2.3.2.4
+    * Install generator update to allow modifications trigger an asset recompile for the following files `[theme_name]/bootswatch.css.less` & `[theme_name]/bootswatch.js.coffee`
+    * Install generator will automatically remove `require_tree .` wildcard directives when found in `application.js` & `application.css`

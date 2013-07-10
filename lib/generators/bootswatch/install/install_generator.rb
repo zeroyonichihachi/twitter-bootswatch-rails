@@ -5,6 +5,8 @@ module Bootswatch
   module Generators
     class InstallGenerator < ::Rails::Generators::NamedBase
 
+      DEFAULT_RAILS_APP_JS_FILE='app/assets/javascripts/application.js'
+      DEFAULT_RAILS_APP_CSS_FILE='app/assets/stylesheets/application.css'
       DEFAULT_THEME_NAME='bootswatch'
 
       argument :name, type: :string, default: DEFAULT_THEME_NAME,
@@ -25,28 +27,38 @@ module Bootswatch
         "#{use_default_theme_name? ? 'bootstrap'.capitalize : theme_name.capitalize}"
       end
 
+      def remove_require_tree_directives
+        if File.exist?(DEFAULT_RAILS_APP_JS_FILE)
+          gsub_file DEFAULT_RAILS_APP_JS_FILE, /\/\/=\s*require_tree\s*\./, ''
+        end
+
+        if File.exist?(DEFAULT_RAILS_APP_CSS_FILE)
+          gsub_file DEFAULT_RAILS_APP_CSS_FILE, /=\s*require_tree\s*\./, ''
+        end
+      end
+
       def add_assets
 
         if use_default_theme_name?
-          if File.exist?('app/assets/javascripts/application.js')
-            unless File.read('app/assets/javascripts/application.js').include?(theme_name)
-              insert_into_file "app/assets/javascripts/application.js",
-                             "//= require #{theme_name}/loader\n",
+          if File.exist?(DEFAULT_RAILS_APP_JS_FILE)
+            unless File.read(DEFAULT_RAILS_APP_JS_FILE).include?(theme_name)
+              insert_into_file DEFAULT_RAILS_APP_JS_FILE,
+                             "//= require #{theme_name}/loader\n//= require #{theme_name}/bootswatch\n",
                              :after => "jquery_ujs\n"
             end
           else
-            template 'application.js.tt', 'app/assets/stylesheets/application.js', {theme_name: theme_name, theme_info: theme_info}
+            template 'application.js.tt', DEFAULT_RAILS_APP_JS_FILE, {theme_name: theme_name, theme_info: theme_info}
           end
 
-          if File.exist?('app/assets/stylesheets/application.css')
-            unless File.read('app/assets/stylesheets/application.css').include?(theme_name)
-              insert_into_file "app/assets/stylesheets/application.css",
-                             " *= require #{theme_name}/loader\n",
+          if File.exist?(DEFAULT_RAILS_APP_CSS_FILE)
+            unless File.read(DEFAULT_RAILS_APP_CSS_FILE).include?(theme_name)
+              insert_into_file DEFAULT_RAILS_APP_CSS_FILE,
+                             " *= require #{theme_name}/loader\n *= require #{theme_name}/bootswatch\n",
                              :after => "require_self\n"
             end
 
           else
-            template 'application.css.tt', 'app/assets/stylesheets/application.css', {theme_name: theme_name, theme_info: theme_info}
+            template 'application.css.tt', DEFAULT_RAILS_APP_CSS_FILE, {theme_name: theme_name, theme_info: theme_info}
           end
         else
           template 'application.js.tt', "app/assets/javascripts/#{theme_name}.js", {theme_name: theme_name, theme_info: theme_info}
@@ -62,7 +74,7 @@ module Bootswatch
 
         template 'loader.coffee.tt', File.join(javascripts_dest_path,'loader.coffee'), {theme_name: theme_name, theme_info: theme_info}
 
-        template 'bootswatch.coffee.tt', File.join(javascripts_dest_path,'bootswatch.coffee'), {theme_name: theme_name, theme_info: theme_info}
+        template 'bootswatch.js.coffee.tt', File.join(javascripts_dest_path,'bootswatch.js.coffee'), {theme_name: theme_name, theme_info: theme_info}
 
       end
 
@@ -79,7 +91,7 @@ module Bootswatch
 
         template 'mixins.less.tt', File.join(stylesheets_dest_path,'mixins.less'), {theme_name: theme_name, theme_info: theme_info}
 
-        template 'bootswatch.less.tt', File.join(stylesheets_dest_path,'bootswatch.less'), {theme_name: theme_name, theme_info: theme_info}
+        template 'bootswatch.css.less.tt', File.join(stylesheets_dest_path,'bootswatch.css.less'), {theme_name: theme_name, theme_info: theme_info}
 
         template 'base.less.tt', File.join(stylesheets_dest_path,'base.less'), {theme_name: theme_name, theme_info: theme_info}
 

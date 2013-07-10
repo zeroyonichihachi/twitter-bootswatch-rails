@@ -1,7 +1,7 @@
-@import "base";
+@import "<%= config[:theme_name] %>/base";
 // <%= config[:theme_info] %>
 // Bootswatch
-// bootswatch.less
+// bootswatch.css.less
 
 //body {
 //	padding-top: 10px;

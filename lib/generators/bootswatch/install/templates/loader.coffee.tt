@@ -21,5 +21,3 @@ bootstrap-affix]
 js_files.each do |js_file|
 %>#= require twitter/bootstrap/<%= js_file %>
 <% end %>
-
-#= require <%= config[:theme_name] %>/bootswatch

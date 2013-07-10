@@ -3,3 +3,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require <%= config[:theme_name] %>/loader
+//= require <%= config[:theme_name] %>/bootswatch
