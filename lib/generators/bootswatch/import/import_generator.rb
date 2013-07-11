@@ -28,11 +28,19 @@ module Bootswatch
         get File.join(theme_repo_url,'variables.less'), File.join(stylesheets_dest_path,'variables.less')
 
 
-        get File.join(theme_repo_url,'bootswatch.less'), File.join(stylesheets_dest_path,'bootswatch.less')
+        get File.join(theme_repo_url,'bootswatch.less'), File.join(stylesheets_dest_path,'bootswatch.css.less')
 
-        prepend_to_file File.join(stylesheets_dest_path,'bootswatch.less') do
-          "@import \"base\";\n"
+        prepend_to_file File.join(stylesheets_dest_path,'bootswatch.css.less') do
+          "@import \"#{theme_name}/base\";\n"
         end
+
+        gsub_file File.join(stylesheets_dest_path,'variables.less'),
+                  '"../img/glyphicons-halflings.png"',
+                  '"twitter/bootstrap/glyphicons-halflings.png"'
+
+        gsub_file File.join(stylesheets_dest_path,'variables.less'),
+                  '"../img/glyphicons-halflings-white.png"',
+                  '"twitter/bootstrap/glyphicons-halflings-white.png"'
 
       end
 

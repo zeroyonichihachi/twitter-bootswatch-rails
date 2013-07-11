@@ -318,3 +318,5 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
   - v2.3.2.4
     * Install generator update to allow modifications trigger an asset recompile for the following files `[theme_name]/bootswatch.css.less` & `[theme_name]/bootswatch.js.coffee`
     * Install generator will automatically remove `require_tree .` wildcard directives when found in `application.js` & `application.css`
+  - v2.3.2.5
+    * Fix for import generator for bootswatch.com themes
