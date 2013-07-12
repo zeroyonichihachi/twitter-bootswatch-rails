@@ -74,6 +74,11 @@ module Bootswatch
 
         template 'loader.coffee.tt', File.join(javascripts_dest_path,'loader.coffee'), {theme_name: theme_name, theme_info: theme_info}
 
+        # upgrade to new extension to trigger recompile
+        if File.exist?(File.join(javascripts_dest_path,'bootswatch.coffee'))
+          File.rename(File.join(javascripts_dest_path,'bootswatch.coffee'), File.join(javascripts_dest_path,'bootswatch.js.coffee'))
+        end
+
         template 'bootswatch.js.coffee.tt', File.join(javascripts_dest_path,'bootswatch.js.coffee'), {theme_name: theme_name, theme_info: theme_info}
 
       end
@@ -90,6 +95,11 @@ module Bootswatch
         template 'variables.less.tt', File.join(stylesheets_dest_path,'variables.less'), {theme_name: theme_name, theme_info: theme_info}
 
         template 'mixins.less.tt', File.join(stylesheets_dest_path,'mixins.less'), {theme_name: theme_name, theme_info: theme_info}
+
+        # upgrade to new extension to trigger recompile
+        if File.exist?(File.join(stylesheets_dest_path,'bootswatch.less'))
+          File.rename(File.join(stylesheets_dest_path,'bootswatch.less'), File.join(stylesheets_dest_path,'bootswatch.css.less'))
+        end
 
         template 'bootswatch.css.less.tt', File.join(stylesheets_dest_path,'bootswatch.css.less'), {theme_name: theme_name, theme_info: theme_info}
 
