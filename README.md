@@ -3,11 +3,11 @@
 [![Build Status](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails.png?branch=master)](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails)
 
   - Integrates Twitter Bootstrap CSS into the Rails 3.1+ Asset Pipeline
-  - Easy control over which javascript and less modules are loaded by default. Not every app needs a carousel
-  - Simple default less files for custom application themes ("[theme_name]/variables.less" and "[theme_name]/bootswatch.less")
+  - Easy optimization and control over which javascript and less modules are loaded *(Not every app needs a carousel)*
+  - Simple default less files for custom application themes *(`[theme_name]/variables.less` and `[theme_name]/bootswatch.css.less`)*
   - Easily apply different custom themes or bootswatches from a site like [bootswatch.com](http://bootswatch.com/)
-  - Create several themed swatches for your project with theme_names, (e.g. an admin theme and a storefront theme using namespaced theme_names)
-  - Gem version semantics extend Twitter Bootstrap version semantics, making it simple to know what version of bootstrap the gem is using
+  - Create several themed swatches for your project with theme_names *(e.g. an admin theme and a storefront theme using namespaced theme_names)*
+  - Build custom Twitter Bootstrap templates easily
 
 ## Includes Twitter Bootstrap for Rails 3.1+ Asset Pipeline
 [Twitter Bootstrap](http://twitter.github.com/bootstrap/index.html) is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
@@ -289,7 +289,7 @@ config.app_generators.stylesheet_engine :less
 ***
 
 ### Responsive styling?
-As per the [Twitter Bootstrap](http://twitter.github.io/bootstrap/scaffolding.html#responsive) project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "[theme_name]/loader.css.less" to enable it.
+As per the [Twitter Bootstrap](http://twitter.github.io/bootstrap/scaffolding.html#responsive) project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in `[theme_name]/bootswatch.css.less` to enable it.
 
 ***
 
@@ -320,3 +320,7 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
     * Install generator will automatically remove `require_tree .` wildcard directives when found in `application.js` & `application.css`
   - v2.3.2.5
     * Bug fixes for import & install generators
+  - v2.3.2.6
+    * Install generator now places `@import "twitter/bootstrap/responsive";` inside `[theme_name]/bootswatch.css.less`
+    * Install generator now comments out `@import "twitter/bootstrap/variables";` & `@import "twitter/bootstrap/mixins";` inside `[theme_name]/loader.css.less`
+    * Refactoring of templates for easier readability

@@ -1,8 +1,10 @@
 // <%= config[:theme_info] %>
 // Bootswatch
 // base.less
-// allows access to less variables in bootswatch.less
-@import "twitter/bootstrap/variables";
+// allows access to core variables and mixins inside bootswatch.css.less
+
+// @import "twitter/bootstrap/variables";
 @import "<%= config[:theme_name] %>/variables";
-@import "twitter/bootstrap/mixins";
+
+// @import "twitter/bootstrap/mixins";
 @import "<%= config[:theme_name] %>/mixins";

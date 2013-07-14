@@ -2,19 +2,18 @@
 // Bootswatch
 // loader.css.less
 // customize the modules loaded here
+
 <%
 config[:less_imports].map{|item| item.gsub(/.less/, '')}.each do |less_file|
+case less_file
+when /(variables|mixins)/ then
+%>// @import "twitter/bootstrap/<%= less_file %>";
+@import "<%= config[:theme_name] %>/<%= less_file %>";
+
+<%
+else
 %>@import "twitter/bootstrap/<%= less_file %>";
-<%
-if less_file == 'variables'
-%>@import "<%= config[:theme_name] %>/<%= less_file %>";
-<%
-end
-if less_file == 'mixins'
-%>@import "<%= config[:theme_name] %>/<%= less_file %>";
 <%
 end
 end
 %>
-
-// @import "twitter/bootstrap/responsive";
