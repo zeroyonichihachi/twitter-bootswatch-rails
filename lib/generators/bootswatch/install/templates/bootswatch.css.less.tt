@@ -1,5 +1,4 @@
 @import "<%= config[:theme_name] %>/base";
-// @import "twitter/bootstrap/responsive";
 
 // <%= config[:theme_info] %>
 // Bootswatch

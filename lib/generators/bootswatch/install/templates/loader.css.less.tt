@@ -1,7 +1,7 @@
 // <%= config[:theme_info] %>
 // Bootswatch
 // loader.css.less
-// customize the modules loaded here
+// Customize the modules loaded here
 
 <%
 config[:less_imports].map{|item| item.gsub(/.less/, '')}.each do |less_file|
@@ -17,3 +17,5 @@ else
 end
 end
 %>
+
+// @import "<%= config[:theme_name] %>/responsive";

@@ -39,15 +39,50 @@ class Setup < Thor
 
   end
 
+  desc 'bootstrap_responsive_less_file_with_theme_info', 'update responsive less with theme info'
+  def bootstrap_responsive_less_file_with_theme_info
+
+    responsive_less_file = 'lib/generators/bootswatch/install/templates/responsive.less.tt'
+
+    gsub_file responsive_less_file,
+              '"variables.less"',
+              '"<%= config[:theme_name] %>/variables.less"'
+
+    gsub_file responsive_less_file,
+              '"mixins.less"',
+              '"<%= config[:theme_name] %>/mixins.less"'
+
+    core_reponsive_less_files = %w(
+      responsive-utilities.less
+      responsive-1200px-min.less
+      responsive-768px-979px.less
+      responsive-767px-max.less
+      responsive-navbar.less
+      )
+
+    core_reponsive_less_files.each do |less_file|
+
+      gsub_file responsive_less_file,
+                less_file,
+                'twitter/bootstrap/'.concat(less_file)
+
+    end
+
+  end
+
   desc 'bootstrap_update_less_files_with_theme_info', 'update bootstrap less files with theme info'
   def bootstrap_update_less_files_with_theme_info
 
+    prepend_to_file 'lib/generators/bootswatch/install/templates/responsive.less.tt' do
+      "// <%= config[:theme_info] %>\n// Bootswatch\n\n"
+    end
+
     prepend_to_file 'lib/generators/bootswatch/install/templates/variables.less.tt' do
-      "// <%= config[:theme_info] %>\n// Bootswatch\n"
+      "// <%= config[:theme_info] %>\n// Bootswatch\n\n"
     end
 
     prepend_to_file 'lib/generators/bootswatch/install/templates/mixins.less.tt' do
-      "// <%= config[:theme_info] %>\n// Bootswatch\n"
+      "// <%= config[:theme_info] %>\n// Bootswatch\n\n"
     end
 
   end

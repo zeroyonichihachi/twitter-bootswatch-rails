@@ -88,9 +88,13 @@ module Bootswatch
         stylesheets_dest_path = "app/assets/stylesheets/#{theme_name}"
         empty_directory stylesheets_dest_path
 
-        less_imports = File.read(find_in_source_paths('bootstrap.less')).scan(Less::Rails::ImportProcessor::IMPORT_SCANNER).flatten.compact.uniq
+        bootstrap_less_imports = File.read(find_in_source_paths('bootstrap.less')).scan(Less::Rails::ImportProcessor::IMPORT_SCANNER).flatten.compact.uniq
 
-        template 'loader.css.less.tt', File.join(stylesheets_dest_path,'loader.css.less'), {less_imports: less_imports, theme_name: theme_name, theme_info: theme_info}
+        template 'loader.css.less.tt', File.join(stylesheets_dest_path,'loader.css.less'), {less_imports: bootstrap_less_imports, theme_name: theme_name, theme_info: theme_info}
+
+        template 'responsive.less.tt', File.join(stylesheets_dest_path,'responsive.less'), {theme_name: theme_name, theme_info: theme_info}
+
+        # now variables and mixins
 
         template 'variables.less.tt', File.join(stylesheets_dest_path,'variables.less'), {theme_name: theme_name, theme_info: theme_info}
 

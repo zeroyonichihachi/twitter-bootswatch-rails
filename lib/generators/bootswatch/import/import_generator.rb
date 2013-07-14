@@ -31,7 +31,7 @@ module Bootswatch
         get File.join(theme_repo_url,'bootswatch.less'), File.join(stylesheets_dest_path,'bootswatch.css.less')
 
         prepend_to_file File.join(stylesheets_dest_path,'bootswatch.css.less') do
-          "@import \"#{theme_name}/base\";\n"
+          "@import \"#{theme_name}/base\";\n\n"
         end
 
         gsub_file File.join(stylesheets_dest_path,'variables.less'),

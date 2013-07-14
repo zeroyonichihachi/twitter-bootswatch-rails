@@ -293,7 +293,7 @@ config.app_generators.stylesheet_engine :less
 ***
 
 ### Responsive styling?
-As per the [Twitter Bootstrap](http://twitter.github.io/bootstrap/scaffolding.html#responsive) project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in `[theme_name]/bootswatch.css.less` to enable it.
+As per the [Twitter Bootstrap](http://twitter.github.io/bootstrap/scaffolding.html#responsive) project we don't include the responsive styles by default. Uncomment `@import "[theme_name]/responsive";` in `[theme_name]/loader.css.less` to enable it.
 
 ***
 
@@ -325,6 +325,8 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
   - v2.3.2.5
     * Bug fixes for import & install generators
   - v2.3.2.6
-    * Install generator now places `@import "twitter/bootstrap/responsive";` inside `[theme_name]/bootswatch.css.less`
     * Install generator now comments out `@import "twitter/bootstrap/variables";` & `@import "twitter/bootstrap/mixins";` inside `[theme_name]/loader.css.less`
     * Refactoring of templates for easier readability
+  - v2.3.2.7
+    * Responsive load order fix
+    * Install generator now creates custom `@import "[theme_name]/responsive";` for directive inside `[theme_name]/loader.css.less`

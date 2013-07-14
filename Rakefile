@@ -22,8 +22,12 @@ task :bundle do
   sh 'thor setup:bootstrap_update_js_files_compilation_order'
 
   sh 'cp -f vendor/toolkit/twitter/bootstrap/bootstrap.less lib/generators/bootswatch/install/templates/bootstrap.less'
+  sh 'cp -f vendor/toolkit/twitter/bootstrap/responsive.less lib/generators/bootswatch/install/templates/responsive.less.tt'
+
   sh 'cp -f vendor/toolkit/twitter/bootstrap/variables.less lib/generators/bootswatch/install/templates/variables.less.tt'
   sh 'cp -f vendor/toolkit/twitter/bootstrap/mixins.less lib/generators/bootswatch/install/templates/mixins.less.tt'
+
+  sh 'thor setup:bootstrap_responsive_less_file_with_theme_info'
 
   sh 'thor setup:bootstrap_update_less_files_with_theme_info'
 
