@@ -10,7 +10,7 @@
     * `[theme_name]/bootswatch.css.less`
   - Easily apply different custom themes or bootswatches from a site like [bootswatch.com](http://bootswatch.com/)
   - Create several themed swatches for your project with theme_names
-    * e.g. an admin *(backend)* theme and a storefront *(frontend)* theme using namespaced theme_names
+    * e.g. an admin *(backend)* theme and a storefront *(frontend)*
   - Build custom Twitter Bootstrap templates easily
 
 ## Includes Twitter Bootstrap for Rails 3.1+ Asset Pipeline
