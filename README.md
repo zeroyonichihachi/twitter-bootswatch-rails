@@ -3,10 +3,14 @@
 [![Build Status](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails.png?branch=master)](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails)
 
   - Integrates Twitter Bootstrap CSS into the Rails 3.1+ Asset Pipeline
-  - Easy optimization and control over which javascript and less modules are loaded *(Not every app needs a carousel)*
-  - Simple default less files for custom application themes *(`[theme_name]/variables.less` and `[theme_name]/bootswatch.css.less`)*
+  - Easy optimization and control over which javascript and less modules are loaded 
+    * *Not every app needs a carousel*
+  - Simple default less files for custom application themes 
+    * `[theme_name]/variables.less`
+    * `[theme_name]/bootswatch.css.less`
   - Easily apply different custom themes or bootswatches from a site like [bootswatch.com](http://bootswatch.com/)
-  - Create several themed swatches for your project with theme_names *(e.g. an admin theme and a storefront theme using namespaced theme_names)*
+  - Create several themed swatches for your project with theme_names
+    * e.g. an admin *(backend)* theme and a storefront *(frontend)* theme using namespaced theme_names
   - Build custom Twitter Bootstrap templates easily
 
 ## Includes Twitter Bootstrap for Rails 3.1+ Asset Pipeline
