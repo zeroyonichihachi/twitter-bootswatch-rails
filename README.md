@@ -8,13 +8,13 @@
   - Simple default less files for custom application themes 
     * `[theme_name]/variables.less`
     * `[theme_name]/bootswatch.css.less`
-  - Easily apply different custom themes or bootswatches from a site like [bootswatch.com](http://bootswatch.com/)
+  - Easily apply different custom themes or bootswatches from a site like [bootswatch.com](http://bootswatch.com/2/)
   - Create several themed swatches for your project with theme_names
     * e.g. an admin *(backend)* theme and a storefront *(frontend)* theme
   - Build custom Twitter Bootstrap templates easily
 
 ## Includes Twitter Bootstrap for Rails 3.1+ Asset Pipeline
-[Twitter Bootstrap](http://twitter.github.com/bootstrap/index.html) is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
+[Twitter Bootstrap](http://getbootstrap.com/2.3.2/) is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
 
 ## Including Font Awesome for Rails 3.1+ Asset Pipeline
 [Font Awesome](http://fortawesome.github.io/Font-Awesome) is a toolkit with iconic fonts designed for use with Twitter Bootstrap.
@@ -121,7 +121,7 @@ Example:
     rake db:migrate
     rails g bootswatch:themed Posts
 
-## Import a free [bootswatch.com](http://bootswatch.com/) theme
+## Import a free [bootswatch.com](http://bootswatch.com/2/) theme
 
 *(only available with twitter-bootswatch-rails v2.3.1.2+)*
 
@@ -133,7 +133,7 @@ Example:
 
 The above creates a namespaced theme under assets/javascript/cyborg assets/stylesheets/cyborg and a new layout file.
 
-The import generator pulls directly from the [bootswatch.com](http://bootswatch.com/) git repo [cyborg](https://github.com/thomaspark/bootswatch/tree/gh-pages/cyborg) directory.
+The import generator pulls directly from the [bootswatch.com](http://bootswatch.com/2/) git repo [cyborg](https://github.com/thomaspark/bootswatch/tree/gh-pages/2/cyborg) directory.
 
 * bootswatch.less
 * variables.less
@@ -171,13 +171,13 @@ You have to require `[theme_name]/loader.css.less` in your application.css
 
 `[theme_name]/loader.css.less` allows you to easily comment out less modules you don't need in your application.
 
-For instance, as per the [Twitter Bootstrap](http://twitter.github.io/bootstrap/scaffolding.html#responsive) project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "[theme_name]/loader.css.less" to enable it.
+For instance, as per the [Twitter Bootstrap](http://twbs.github.io/bootstrap/2.3.2/scaffolding.html#responsive) project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "[theme_name]/loader.css.less" to enable it.
 
 `[theme_name]/variables.less` customize Twitter Bootstrap "variables.less" defaults in this file.
 
 `[theme_name]/bootswatch.css.less` customize the style of Twitter Bootstrap base css and component style here.
 
-Check out some of the swatches at [bootswatch.com](http://bootswatch.com/)
+Check out some of the swatches at [bootswatch.com](http://bootswatch.com/2/)
 
 Read up on the [less-rails](https://github.com/metaskills/less-rails/) gem.
 
@@ -235,7 +235,7 @@ You have to require the coffee script file `[theme_name]/loader.coffee` & `[them
 
 `[theme_name]/bootswatch.js.coffee` allows you to easily add swatch customization to javascript modules loaded:
 
-Check out some of the swatches at [bootswatch.com](http://bootswatch.com/)
+Check out some of the swatches at [bootswatch.com](http://bootswatch.com/2/)
 
 ***
 
@@ -293,12 +293,12 @@ config.app_generators.stylesheet_engine :less
 ***
 
 ### Responsive styling?
-As per the [Twitter Bootstrap](http://twitter.github.io/bootstrap/scaffolding.html#responsive) project we don't include the responsive styles by default. Uncomment `@import "[theme_name]/responsive";` in `[theme_name]/loader.css.less` to enable it.
+As per the [Twitter Bootstrap](http://twbs.github.io/bootstrap/2.3.2/scaffolding.html#responsive) project we don't include the responsive styles by default. Uncomment `@import "[theme_name]/responsive";` in `[theme_name]/loader.css.less` to enable it.
 
 ***
 
 ## Versioning
-Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring CSS components (see breaking change 2.0.4 -> 2.1.0). Since many people using bootstrap-swatch-rails *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to bootstrap-swatch-rails will therefore have version numbers of the form `2.x.x.y`, where `2.x.x` is the release of Bootstrap we should be compatible with, and `y` is the patch version.
+Bootstrap [claims](https://github.com/twbs/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring CSS components (see breaking change 2.0.4 -> 2.1.0). Since many people using bootstrap-swatch-rails *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to bootstrap-swatch-rails will therefore have version numbers of the form `2.x.x.y`, where `2.x.x` is the release of Bootstrap we should be compatible with, and `y` is the patch version.
 
 ## Changelog
   - v2.3.1.0
