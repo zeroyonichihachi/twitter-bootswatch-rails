@@ -17,7 +17,8 @@ module Bootswatch
       end
 
       def theme_repo_url
-       "https://raw.github.com/thomaspark/bootswatch/gh-pages/#{theme_name}"
+        #TODO: change for 3.0.0 release
+       "https://raw.github.com/thomaspark/bootswatch/gh-pages/2/#{theme_name}"
       end
 
       def import_less

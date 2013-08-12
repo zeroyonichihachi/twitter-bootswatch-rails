@@ -16,8 +16,6 @@ Gem::Specification.new do |s|
   s.summary     = %q{Twitter Bootstrap CSS toolkit for Rails 3.1+ Asset Pipeline with less-rails (no fluff - core only)}
   s.description = %q{twitter-bootswatch-rails project integrates Bootstrap CSS toolkit for Rails 3.1+ Asset Pipeline with less-rails and allows you to easily cherry pick and customize a theme for your app}
 
-  s.rubyforge_project = "twitter-bootswatch-rails"
-
   s.files = Dir["lib/twitter/**/*"] + Dir["lib/generators/**/*"] + Dir["vendor/**/*"] + ["lib/twitter-bootswatch-rails.rb"]
 
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
