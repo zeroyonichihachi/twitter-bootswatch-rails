@@ -331,4 +331,4 @@ Bootstrap [claims](https://github.com/twitter/bootstrap#versioning) to use SemVe
     * Responsive load order fix
     * Install generator now creates custom `@import "[theme_name]/responsive";` for directive inside `[theme_name]/loader.css.less`
   - v2.3.2.8
-    * update [bootswatch repo](https://github.com/thomaspark/bootswatch/tree/gh-pages/2) to v2 folder of themes
+    * update [bootswatch themes repo](https://github.com/thomaspark/bootswatch/tree/gh-pages/2) to v2 folder of themes
