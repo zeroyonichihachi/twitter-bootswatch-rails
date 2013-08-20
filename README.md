@@ -210,7 +210,7 @@ You have to require the javascript script file `[theme_name]/loader.js` & `[them
 //= require [theme_name]/bootswatch
 ```
 
-"[theme_name]/loader.js" allows you to easily comment out modules you don't need in your application:
+`[theme_name]/loader.js` allows you to easily comment out modules you don't need in your application:
 
 ```js
 // [theme_name]/loader.js
@@ -230,9 +230,7 @@ You have to require the javascript script file `[theme_name]/loader.js` & `[them
 
 ```
 
-`[theme_name]/bootswatch.js` allows you to easily add swatch customization to javascript modules loaded:
-
-Check out some of the swatches at [bootswatch.com](http://bootswatch.com/2/)
+`[theme_name]/bootswatch.js` allows you to add more customization & overrides to twitter bootstrap javascript components.
 
 ***
 
