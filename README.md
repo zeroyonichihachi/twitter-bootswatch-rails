@@ -1,8 +1,8 @@
-# Twitter Bootswatch Rails gem
+# Twitter Bootswatch Rails 2.3.2 gem
 
 [![Build Status](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails.png?branch=master)](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails)
 
-  - Integrates Twitter Bootstrap CSS into the Rails 3.1+ Asset Pipeline
+  - Integrates Twitter Bootstrap 2.3.2 into the Rails 3.1+ Asset Pipeline
   - Easy optimization and control over which javascript and less modules are loaded 
     * *Not every app needs a carousel*
   - Simple default less files for custom application themes 
@@ -11,9 +11,9 @@
   - Easily apply different custom themes or bootswatches from a site like [bootswatch.com](http://bootswatch.com/2/)
   - Create several themed swatches for your project with theme_names
     * e.g. an admin *(backend)* theme and a storefront *(frontend)* theme
-  - Build custom Twitter Bootstrap templates easily
+  - Build custom Twitter Bootstrap 2.3.2 templates easily
 
-## Includes Twitter Bootstrap for Rails 3.1+ Asset Pipeline
+## Includes Twitter Bootstrap 2.3.2 for Rails 3.1+ Asset Pipeline
 [Twitter Bootstrap](http://getbootstrap.com/2.3.2/) is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
 
 ## Including Font Awesome for Rails 3.1+ Asset Pipeline
