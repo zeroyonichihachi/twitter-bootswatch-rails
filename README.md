@@ -1,6 +1,6 @@
 # Twitter Bootswatch Rails 2.3.2 gem
 
-[![Build Status](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails.png?branch=master)](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails)
+[![Build Status](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails.png?branch=2.3.2)](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails)
 
   - Integrates Twitter Bootstrap 2.3.2 into the Rails 3.1+ Asset Pipeline
   - Easy optimization and control over which javascript and less modules are loaded 
