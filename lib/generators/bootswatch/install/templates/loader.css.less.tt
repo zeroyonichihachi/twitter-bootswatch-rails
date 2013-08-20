@@ -18,4 +18,4 @@ end
 end
 %>
 
-// @import "<%= config[:theme_name] %>/responsive";
+// @import "twitter/bootstrap/theme";

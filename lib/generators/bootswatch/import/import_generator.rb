@@ -17,8 +17,7 @@ module Bootswatch
       end
 
       def theme_repo_url
-        #TODO: change for 3.0.0 release
-       "https://raw.github.com/thomaspark/bootswatch/gh-pages/2/#{theme_name}"
+       "https://raw.github.com/thomaspark/bootswatch/gh-pages/#{theme_name}"
       end
 
       def import_less
@@ -39,9 +38,9 @@ module Bootswatch
                   '"../img/glyphicons-halflings.png"',
                   '"twitter/bootstrap/glyphicons-halflings.png"'
 
-        gsub_file File.join(stylesheets_dest_path,'variables.less'),
-                  '"../img/glyphicons-halflings-white.png"',
-                  '"twitter/bootstrap/glyphicons-halflings-white.png"'
+        gsub_file File.join(stylesheets_dest_path, 'variables.less'),
+                  '"../fonts/"',
+                  '"twitter/bootstrap/"'
 
       end
 

@@ -72,14 +72,14 @@ module Bootswatch
         javascripts_dest_path = "app/assets/javascripts/#{theme_name}"
         empty_directory javascripts_dest_path
 
-        template 'loader.coffee.tt', File.join(javascripts_dest_path,'loader.coffee'), {theme_name: theme_name, theme_info: theme_info}
+        template 'loader.js.tt', File.join(javascripts_dest_path,'loader.js'), {theme_name: theme_name, theme_info: theme_info}
 
         # upgrade to new extension to trigger recompile
-        if File.exist?(File.join(javascripts_dest_path,'bootswatch.coffee'))
-          File.rename(File.join(javascripts_dest_path,'bootswatch.coffee'), File.join(javascripts_dest_path,'bootswatch.js.coffee'))
+        if File.exist?(File.join(javascripts_dest_path,'bootswatch.js'))
+          File.rename(File.join(javascripts_dest_path,'bootswatch.js'), File.join(javascripts_dest_path,'bootswatch.js'))
         end
 
-        template 'bootswatch.js.coffee.tt', File.join(javascripts_dest_path,'bootswatch.js.coffee'), {theme_name: theme_name, theme_info: theme_info}
+        template 'bootswatch.js.tt', File.join(javascripts_dest_path,'bootswatch.js'), {theme_name: theme_name, theme_info: theme_info}
 
       end
 
@@ -91,8 +91,6 @@ module Bootswatch
         bootstrap_less_imports = File.read(find_in_source_paths('bootstrap.less')).scan(Less::Rails::ImportProcessor::IMPORT_SCANNER).flatten.compact.uniq
 
         template 'loader.css.less.tt', File.join(stylesheets_dest_path,'loader.css.less'), {less_imports: bootstrap_less_imports, theme_name: theme_name, theme_info: theme_info}
-
-        template 'responsive.less.tt', File.join(stylesheets_dest_path,'responsive.less'), {theme_name: theme_name, theme_info: theme_info}
 
         # now variables and mixins
 

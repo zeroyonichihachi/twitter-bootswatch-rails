@@ -2,21 +2,22 @@
 
 [![Build Status](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails.png?branch=master)](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails)
 
-  - Integrates Twitter Bootstrap CSS into the Rails 3.1+ Asset Pipeline
+  - Integrates Twitter Bootstrap 3.0+ into the Rails Asset Pipeline
   - Easy optimization and control over which javascript and less modules are loaded 
     * *Not every app needs a carousel*
+    * before production easily optimize to just what your template needs
   - Simple default less files for custom application themes 
     * `[theme_name]/variables.less`
     * `[theme_name]/bootswatch.css.less`
-  - Easily apply different custom themes or bootswatches from a site like [bootswatch.com](http://bootswatch.com/2/)
+  - Apply different custom themes or bootswatches from a site like [bootswatch.com](http://bootswatch.com/)
   - Create several themed swatches for your project with theme_names
     * e.g. an admin *(backend)* theme and a storefront *(frontend)* theme
-  - Build custom Twitter Bootstrap templates easily
+  - Quickly build custom Twitter Bootstrap templates using live refresh to see your changes
 
-## Includes Twitter Bootstrap for Rails 3.1+ Asset Pipeline
-[Twitter Bootstrap](http://getbootstrap.com/2.3.2/) is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
+## Includes Twitter Bootstrap for Rails Asset Pipeline
+[Twitter Bootstrap](http://getbootstrap.com/) is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
 
-## Including Font Awesome for Rails 3.1+ Asset Pipeline
+## Including Font Awesome for Rails Asset Pipeline
 [Font Awesome](http://fortawesome.github.io/Font-Awesome) is a toolkit with iconic fonts designed for use with Twitter Bootstrap.
 
 To add Font Awesome to your bootswatch:
@@ -25,7 +26,7 @@ Include the gem [twitter-bootswatch-rails-fontawesome](https://github.com/scottv
 
 ## Demo
 
-The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) will show you how this gem can be used in a rails 3.1+ application.
+The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) will show you how this gem can be used with the rails asset pipeline.
 
 ![Demo Screen Shot](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo/raw/master/demo.png)
 
@@ -35,7 +36,7 @@ The gem [twitter-bootswatch-rails-helpers](https://github.com/scottvrosenthal/tw
 
 ## Install
 
-Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-rails) in Gemfile to install it from [RubyGems.org](http://rubygems.org):
+Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-rails) in Gemfile to install it from [RubyGems.org](https://rubygems.org):
 
 ```ruby
 
@@ -121,9 +122,7 @@ Example:
     rake db:migrate
     rails g bootswatch:themed Posts
 
-## Import a free [bootswatch.com](http://bootswatch.com/2/) theme
-
-*(only available with twitter-bootswatch-rails v2.3.1.2+)*
+## Import a free [bootswatch.com](http://bootswatch.com/) theme
 
 ### Just follow these three steps in the following order :)
 
@@ -133,7 +132,7 @@ Example:
 
 The above creates a namespaced theme under assets/javascript/cyborg assets/stylesheets/cyborg and a new layout file.
 
-The import generator pulls directly from the [bootswatch.com](http://bootswatch.com/2/) git repo [cyborg](https://github.com/thomaspark/bootswatch/tree/gh-pages/2/cyborg) directory.
+The import generator pulls directly from the [bootswatch.com](http://bootswatch.com/) git repo [cyborg](https://github.com/thomaspark/bootswatch/tree/gh-pages/cyborg/) directory.
 
 * bootswatch.less
 * variables.less
@@ -154,6 +153,8 @@ You can also create an admin namespaced theme and import the cyborg `bootswatch.
     rails g bootswatch:import admin/cyborg
     rails g bootswatch:layout admin
 
+*`bootswatch.less` is renamed to `bootswatch.css.less` by the import generator*
+
 Need more examples? Check out the [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo)
 
 ## Using stylesheets with the [less-rails](https://github.com/metaskills/less-rails/) gem
@@ -165,19 +166,16 @@ You have to require `[theme_name]/loader.css.less` in your application.css
  *= require_self
  *= require [theme_name]/loader
  *= require [theme_name]/bootswatch
- *= require font-awesome/font-awesome
 */
 ```
 
 `[theme_name]/loader.css.less` allows you to easily comment out less modules you don't need in your application.
 
-For instance, as per the [Twitter Bootstrap](http://twbs.github.io/bootstrap/2.3.2/scaffolding.html#responsive) project we don't include the responsive styles by default. Uncomment `@import "twitter/bootstrap/responsive";` in "[theme_name]/loader.css.less" to enable it.
-
-`[theme_name]/variables.less` customize Twitter Bootstrap "variables.less" defaults in this file.
+`[theme_name]/variables.less` customize Twitter Bootstrap `variables.less` defaults in this file.
 
 `[theme_name]/bootswatch.css.less` customize the style of Twitter Bootstrap base css and component style here.
 
-Check out some of the swatches at [bootswatch.com](http://bootswatch.com/2/)
+Check out some of the swatches at [bootswatch.com](http://bootswatch.com/)
 
 Read up on the [less-rails](https://github.com/metaskills/less-rails/) gem.
 
@@ -191,7 +189,7 @@ When importing a custom `[theme_name]/bootswatch.css.less` file manually you'll 
 @import "[theme_name]/base";
 ```
 
-The import `[theme_name]/base.less` directive allows the importing less file to access and override inherited less variables.
+The above less directive allows the current less file to access and override inherited less variables.
 
 Example:
 
@@ -203,7 +201,7 @@ Example:
 
 ## Using Javascripts
 
-You have to require the coffee script file `[theme_name]/loader.coffee` & `[theme_name]/bootswatch.js.coffee` in your application.js:
+You have to require the javascript script file `[theme_name]/loader.js` & `[theme_name]/bootswatch.js` in your application.js:
 
 ```javascript
 //= require jquery
@@ -212,28 +210,27 @@ You have to require the coffee script file `[theme_name]/loader.coffee` & `[them
 //= require [theme_name]/bootswatch
 ```
 
-"[theme_name]/loader.coffee" allows you to easily comment out modules you don't need in your application:
+"[theme_name]/loader.js" allows you to easily comment out modules you don't need in your application:
 
-```coffee
-# [theme_name]/loader.coffee
+```js
+// [theme_name]/loader.js
 
-#= require twitter/bootstrap/bootstrap-transition
-#= require twitter/bootstrap/bootstrap-alert
-#= require twitter/bootstrap/bootstrap-button
-#= require twitter/bootstrap/bootstrap-carousel
-#= require twitter/bootstrap/bootstrap-collapse
-#= require twitter/bootstrap/bootstrap-dropdown
-#= require twitter/bootstrap/bootstrap-modal
-#= require twitter/bootstrap/bootstrap-tooltip
-#= require twitter/bootstrap/bootstrap-popover
-#= require twitter/bootstrap/bootstrap-scrollspy
-#= require twitter/bootstrap/bootstrap-tab
-#= require twitter/bootstrap/bootstrap-typeahead
-#= require twitter/bootstrap/bootstrap-affix
+//= require twitter/bootstrap/transition
+//= require twitter/bootstrap/alert
+//= require twitter/bootstrap/button
+//= require twitter/bootstrap/carousel
+//= require twitter/bootstrap/collapse
+//= require twitter/bootstrap/dropdown
+//= require twitter/bootstrap/modal
+//= require twitter/bootstrap/tooltip
+//= require twitter/bootstrap/popover
+//= require twitter/bootstrap/scrollspy
+//= require twitter/bootstrap/tab
+//= require twitter/bootstrap/affix
 
 ```
 
-`[theme_name]/bootswatch.js.coffee` allows you to easily add swatch customization to javascript modules loaded:
+`[theme_name]/bootswatch.js` allows you to easily add swatch customization to javascript modules loaded:
 
 Check out some of the swatches at [bootswatch.com](http://bootswatch.com/2/)
 
@@ -292,43 +289,9 @@ config.app_generators.stylesheet_engine :less
 
 ***
 
-### Responsive styling?
-As per the [Twitter Bootstrap](http://twbs.github.io/bootstrap/2.3.2/scaffolding.html#responsive) project we don't include the responsive styles by default. Uncomment `@import "[theme_name]/responsive";` in `[theme_name]/loader.css.less` to enable it.
-
-***
-
 ## Versioning
-Bootstrap [claims](https://github.com/twbs/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring CSS components (see breaking change 2.0.4 -> 2.1.0). Since many people using bootstrap-swatch-rails *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to bootstrap-swatch-rails will therefore have version numbers of the form `2.x.x.y`, where `2.x.x` is the release of Bootstrap we should be compatible with, and `y` is the patch version.
+Bootstrap [claims](https://github.com/twbs/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring all components (see breaking change 3.0.0 -> 3.1.0). Since many people using twitter-bootswatch-rails *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to twitter-bootswatch-rails will therefore have version numbers of the form `3.x.x.y`, where `3.x.x` is the release of Bootstrap we should be compatible with, and `y` is the patch version.
 
 ## Changelog
-  - v2.3.1.0
-    * Updated to bootstrap 2.3.1
-  - v2.3.1.1
-    * Added theme_name functionality, if a theme_name isn't passed in you get the default install, i.e, uses bootswatch as theme_name
-    * Included bootstrap version number at the top of each asset file created by generators
-    * Added Font Awesome to the asset pipeline as an opt in using an asset directive
-    * Added import generator to dynamically pull in free bootswatch.com themes and add correct import directives
-  - v2.3.1.2
-    * Updated gemspec docs
-    * Updated import generator to allow importing bootswatch.com themes under existing namespaced themes
-      * rails g bootswatch:import admin/cyborg
-  - v2.3.2.0 *(breaking changes ~ font-awesome)*
-    * Updated to bootstrap 2.3.2
-    * Removed/Refactored Font Awesome functionality into separate gem [twitter-bootswatch-rails-fontawesome](https://github.com/scottvrosenthal/twitter-bootswatch-rails-fontawesome)
-  - v2.3.2.2
-    * Rails 4 bug fix for generator error
-  - v2.3.2.3
-    * Slim functionality added
-  - v2.3.2.4
-    * Install generator update to allow modifications trigger an asset recompile for the following files `[theme_name]/bootswatch.css.less` & `[theme_name]/bootswatch.js.coffee`
-    * Install generator will automatically remove `require_tree .` wildcard directives when found in `application.js` & `application.css`
-  - v2.3.2.5
-    * Bug fixes for import & install generators
-  - v2.3.2.6
-    * Install generator now comments out `@import "twitter/bootstrap/variables";` & `@import "twitter/bootstrap/mixins";` inside `[theme_name]/loader.css.less`
-    * Refactoring of templates for easier readability
-  - v2.3.2.7
-    * Responsive load order fix
-    * Install generator now creates custom `@import "[theme_name]/responsive";` for directive inside `[theme_name]/loader.css.less`
-  - v2.3.2.8
-    * update [bootswatch themes repo](https://github.com/thomaspark/bootswatch/tree/gh-pages/2) to v2 folder of themes
+  - v3.0.0.0
+    * Updated to bootstrap 3.0.0
