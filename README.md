@@ -17,22 +17,11 @@
 ## Includes Twitter Bootstrap for Rails Asset Pipeline
 [Twitter Bootstrap](http://getbootstrap.com/) is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
 
-## Including Font Awesome for Rails Asset Pipeline
-[Font Awesome](http://fortawesome.github.io/Font-Awesome) is a toolkit with iconic fonts designed for use with Twitter Bootstrap.
-
-To add Font Awesome to your bootswatch:
-
-Include the gem [twitter-bootswatch-rails-fontawesome](https://github.com/scottvrosenthal/twitter-bootswatch-rails-fontawesome)
-
 ## Demo
 
 The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) will show you how this gem can be used with the rails asset pipeline.
 
 ![Demo Screen Shot](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo/raw/master/demo.png)
-
-## View Helpers
-The gem [twitter-bootswatch-rails-helpers](https://github.com/scottvrosenthal/twitter-bootswatch-rails-helpers) provides rails view helpers for twitter bootstrap's breadcrumbs and alerts components.
-
 
 ## Install
 
@@ -42,12 +31,6 @@ Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-boot
 
 # twitter bootstrap css & javascript toolkit
 gem 'twitter-bootswatch-rails'
-
-# font awesome extension gem
-gem 'twitter-bootswatch-rails-fontawesome'
-
-# twitter bootstrap helpers gem, e.g., alerts etc...
-gem 'twitter-bootswatch-rails-helpers'
 
 ```
 
