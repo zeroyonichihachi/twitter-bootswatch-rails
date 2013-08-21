@@ -5,7 +5,7 @@
   - Integrates Twitter Bootstrap 3.0+ into the Rails Asset Pipeline
   - Easy optimization and control over which javascript and less modules are loaded 
     * *Not every app needs a carousel*
-    * before production easily optimize to just what your template needs
+    * *easily optimize to just what your template needs*
   - Simple default less files for custom application themes 
     * `[theme_name]/variables.less`
     * `[theme_name]/bootswatch.css.less`
@@ -267,6 +267,12 @@ config.app_generators.stylesheet_engine :less
 ### List of Twitter Bootstrap plugins
 
   - [the-big-badass-list-of-twitter-bootstrap-resources](http://bootstraphero.com/the-big-badass-list-of-twitter-bootstrap-resources)
+
+***
+
+### Upgrading Twitter Bootstrap from 2.x to 3.0
+
+- [migration](http://getbootstrap.com/getting-started/#migration)
 
 ***
 
