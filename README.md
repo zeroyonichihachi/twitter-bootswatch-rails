@@ -23,15 +23,8 @@ To add Font Awesome to your bootswatch:
 
 Include the gem [twitter-bootswatch-rails-fontawesome](https://github.com/scottvrosenthal/twitter-bootswatch-rails-fontawesome)
 
-## Demo
-
-The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) will show you how this gem can be used in a rails 3.1+ application.
-
-![Demo Screen Shot](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo/raw/master/demo.png)
-
 ## View Helpers
 The gem [twitter-bootswatch-rails-helpers](https://github.com/scottvrosenthal/twitter-bootswatch-rails-helpers) provides rails view helpers for twitter bootstrap's breadcrumbs and alerts components.
-
 
 ## Install
 
@@ -40,7 +33,7 @@ Include the [Twitter Bootswatch Rails gem](http://rubygems.org/gems/twitter-boot
 ```ruby
 
 # twitter bootstrap css & javascript toolkit
-gem 'twitter-bootswatch-rails'
+gem 'twitter-bootswatch-rails', '~> 2.3.2'
 
 # font awesome extension gem
 gem 'twitter-bootswatch-rails-fontawesome'
