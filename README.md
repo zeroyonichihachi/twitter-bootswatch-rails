@@ -1,4 +1,4 @@
-# Bootswatch Rails gem
+# Bootswatch 3.0.0 Rails gem
 
 [![Build Status](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails.png?branch=master)](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails)
 
