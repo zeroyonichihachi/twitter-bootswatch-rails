@@ -289,3 +289,5 @@ Bootstrap [claims](https://github.com/twbs/bootstrap#versioning) to use SemVer, 
 ## Changelog
   - v3.0.0.0
     * Updated to bootstrap 3.0.0
+  - v3.0.0.1
+    * Fixed rails4 compatibility (fixes missing glyphs on precompile)

@@ -9,10 +9,10 @@ task :bundle do
 
   ## begin bootstrap config ##
 
-  sh 'rm -f vendor/assets/fonts/twitter/bootstrap/*.*'
+  sh 'rm -f app/assets/fonts/twitter/bootstrap/*.*'
   sh 'cp -f bootstrap/fonts/*.* app/assets/fonts/twitter/bootstrap'
 
-  sh 'rm -f vendor/assets/javascripts/twitter/bootstrap/*.js'
+  sh 'rm -f app/assets/javascripts/twitter/bootstrap/*.js'
   sh 'cp -f bootstrap/js/*.js app/assets/javascripts/twitter/bootstrap'
 
   sh 'rm -f vendor/toolkit/twitter/bootstrap/*.less'
