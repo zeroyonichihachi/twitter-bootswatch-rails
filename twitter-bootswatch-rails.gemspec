@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Bootstrap toolkit for Rails Asset Pipeline with less-rails}
   s.description = %q{twitter-bootswatch-rails gem integrates Bootstrap for Rails Asset Pipeline with less-rails}
 
-  s.files = Dir["lib/twitter/**/*"] + Dir["lib/generators/**/*"] + Dir["vendor/**/*"] + ["lib/twitter-bootswatch-rails.rb"]
+  s.files = Dir["lib/twitter/**/*"] + Dir["lib/generators/**/*"] + Dir["app/**/*"] + Dir["vendor/**/*"] + ["lib/twitter-bootswatch-rails.rb"]
 
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
