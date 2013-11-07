@@ -1,6 +1,6 @@
 # Bootswatch 3.0.1 Rails gem
 
-[![Build Status](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails.png?branch=master)](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails)
+[![Build Status](https://travis-ci.org/scottvrosenthal/twitter-bootswatch-rails.png?branch=master)](https://travis-ci.org/scottvrosenthal/twitter-bootswatch-rails)
 
   - Integrates Bootstrap 3.0+ into the Rails Asset Pipeline
   - Easy optimization and control over which javascript and less modules are loaded 
