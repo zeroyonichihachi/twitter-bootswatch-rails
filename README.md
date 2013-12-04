@@ -1,4 +1,4 @@
-# Bootswatch 3.0.1 Rails gem
+# Bootswatch 3.0.2 Rails gem
 
 [![Build Status](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails.png?branch=master)](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails)
 
@@ -34,7 +34,7 @@ Include the [Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-r
 ```ruby
 
 # twitter bootstrap css & javascript toolkit
-gem 'twitter-bootswatch-rails', '~> 3.0.1'
+gem 'twitter-bootswatch-rails', '~> 3.0.2'
 
 # twitter bootstrap helpers gem, e.g., alerts etc...
 gem 'twitter-bootswatch-rails-helpers'
@@ -287,6 +287,6 @@ config.app_generators.stylesheet_engine :less
 Bootstrap [claims](https://github.com/twbs/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring all components (see breaking change 3.0.0 -> 3.1.0). Since many people using twitter-bootswatch-rails *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to twitter-bootswatch-rails will therefore have version numbers of the form `3.x.x.y`, where `3.x.x` is the release of Bootstrap we should be compatible with, and `y` is the patch version.
 
 ## Changelog
-  - v3.0.1.0
-    * Updated to bootstrap 3.0.1
+  - v3.0.2.0
+    * Updated to bootstrap 3.0.2
 
