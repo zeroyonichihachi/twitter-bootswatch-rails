@@ -1,6 +1,6 @@
 # Bootswatch 3.0.2 Rails gem
 
-[![Build Status](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails.png?branch=master)](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails)
+[![Build Status](https://travis-ci.org/scottvrosenthal/twitter-bootswatch-rails.png?branch=master)](https://travis-ci.org/scottvrosenthal/twitter-bootswatch-rails)
 
   - Integrates Bootstrap 3.0+ into the Rails Asset Pipeline
   - Easy optimization and control over which javascript and less modules are loaded 
@@ -16,6 +16,13 @@
 
 ## Includes Bootstrap for Rails Asset Pipeline
 [Bootstrap](http://getbootstrap.com/) is a toolkit designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
+
+## Including Font Awesome for Rails Asset Pipeline
+[Font Awesome](http://fortawesome.github.io/Font-Awesome) is a toolkit with iconic fonts designed for use with Twitter Bootstrap.
+
+To add Font Awesome to your bootswatch:
+
+Include the gem [twitter-bootswatch-rails-fontawesome](https://github.com/scottvrosenthal/twitter-bootswatch-rails-fontawesome)
 
 ## Demo
 
