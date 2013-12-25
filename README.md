@@ -51,7 +51,7 @@ gem 'twitter-bootswatch-rails-helpers'
 or you can install from latest build;
 
 ```ruby
-gem 'twitter-bootswatch-rails', :git => 'git://github.com/scottvrosenthal/twitter-bootswatch-rails.git'
+gem 'twitter-bootswatch-rails', :github => 'scottvrosenthal/twitter-bootswatch-rails'
 ```
 
 Run bundle from command line
