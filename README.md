@@ -1,4 +1,4 @@
-# TWBS Bootstrap 3.0.3 Rails gem
+# Bootstrap 3.0.3 Rails gem
 
 [![Build Status](https://travis-ci.org/scottvrosenthal/twitter-bootswatch-rails.png?branch=master)](https://travis-ci.org/scottvrosenthal/twitter-bootswatch-rails)
 
