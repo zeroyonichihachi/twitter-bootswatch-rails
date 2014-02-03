@@ -21,7 +21,7 @@ class Setup < Thor
   def bootstrap_update_js_files_compilation_order
 
     # grab the js files compilation order from bootstrap Makefile
-    lines = IO.readlines('bootstrap/Gruntfile.js')[49..60]
+    lines = IO.readlines('bootstrap/Gruntfile.js')[96..106]
     # clean up array
     js_files = lines.map{|item| item.strip.gsub(/(\'|,|js\/|\.js)/, '')}
 

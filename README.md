@@ -9,7 +9,6 @@
   - Simple default less files for custom application themes 
     * `[theme_name]/variables.less`
     * `[theme_name]/bootswatch.css.less`
-  - Apply different custom themes or bootswatches from a site like [bootswatch.com](http://bootswatch.com/)
   - Create several themed swatches for your project with theme_names
     * e.g. an admin *(backend)* theme and a storefront *(frontend)* theme
   - Quickly build custom Bootstrap templates using live refresh to see your changes
@@ -41,7 +40,7 @@ Include the [Bootswatch Rails gem](http://rubygems.org/gems/twitter-bootswatch-r
 ```ruby
 
 # twitter bootstrap css & javascript toolkit
-gem 'twitter-bootswatch-rails', '~> 3.0.3'
+gem 'twitter-bootswatch-rails', '~> 3.1.0'
 
 # twitter bootstrap helpers gem, e.g., alerts etc...
 gem 'twitter-bootswatch-rails-helpers'
@@ -118,41 +117,6 @@ Example:
     rails g scaffold Post title:string description:text
     rake db:migrate
     rails g bootswatch:themed Posts
-
-## Import a free [bootswatch.com](http://bootswatch.com/) theme
-
-### Just follow these three steps in the following order :)
-
-    rails g bootswatch:install cyborg
-    rails g bootswatch:import cyborg
-    rails g bootswatch:layout cyborg
-
-The above creates a namespaced theme under assets/javascript/cyborg assets/stylesheets/cyborg and a new layout file.
-
-The import generator pulls directly from the [bootswatch.com](http://bootswatch.com/) git repo [cyborg](https://github.com/thomaspark/bootswatch/tree/gh-pages/cyborg/) directory.
-
-* bootswatch.less
-* variables.less
-
-In your rails controllers just tell it to use the cyborg layout.
-
-
-```ruby
-class ApplicationController < ActionController::Base
-  # ...
-  layout 'cyborg'
-end
-```
-
-You can also create an admin namespaced theme and import the cyborg `bootswatch.less` and `variable.less` files:
-
-    rails g bootswatch:install admin
-    rails g bootswatch:import admin/cyborg
-    rails g bootswatch:layout admin
-
-*`bootswatch.less` is renamed to `bootswatch.css.less` by the import generator*
-
-Need more examples? Check out the [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo)
 
 ## Using stylesheets with the [less-rails](https://github.com/metaskills/less-rails/) gem
 
@@ -284,7 +248,7 @@ config.app_generators.stylesheet_engine :less
 
 ***
 
-### Upgrading Bootstrap from 2.x to 3.0
+### Upgrading Bootstrap from 2.1 to 3.0
 
 - [migration](http://getbootstrap.com/getting-started/#migration)
 
@@ -294,6 +258,7 @@ config.app_generators.stylesheet_engine :less
 Bootstrap [claims](https://github.com/twbs/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring all components (see breaking change 3.0.0 -> 3.1.0). Since many people using twitter-bootswatch-rails *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to twitter-bootswatch-rails will therefore have version numbers of the form `3.x.x.y`, where `3.x.x` is the release of Bootstrap we should be compatible with, and `y` is the patch version.
 
 ## Changelog
-  - v3.0.3.0
-    * Updated to bootstrap 3.0.3
+  - v3.1.0.0
+    * Updated to bootstrap 3.1.0
+    * Moving bootswatch import generator to separate gem
 
