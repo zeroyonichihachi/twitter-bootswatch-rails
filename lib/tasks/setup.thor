@@ -17,7 +17,7 @@ class Setup < Thor
 
     gsub_file 'vendor/toolkit/twitter/bootstrap/glyphicons.less',
               ')",',
-              ');'
+              '),'
 
     gsub_file 'vendor/toolkit/twitter/bootstrap/mixins.less',
               ' url(',
