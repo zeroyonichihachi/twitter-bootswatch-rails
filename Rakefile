@@ -5,8 +5,6 @@ Bundler::GemHelper.install_tasks
 desc 'Configure then bundle the gem'
 task :bundle do
 
-  sh 'bundle install'
-
   ## begin bootstrap config ##
 
   sh 'rm -f app/assets/fonts/twitter/bootstrap/*.*'
