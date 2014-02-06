@@ -1,14 +1,15 @@
-# Bootstrap 3.0.3 Rails gem
+# Bootstrap 3.1.0 Rails gem
 
 [![Build Status](https://travis-ci.org/scottvrosenthal/twitter-bootswatch-rails.png?branch=master)](https://travis-ci.org/scottvrosenthal/twitter-bootswatch-rails)
 
-  - Integrates Bootstrap 3.0+ into the Rails Asset Pipeline
+  - Integrates Bootstrap 3.1+ into the Rails Asset Pipeline
   - Easy optimization and control over which javascript and less modules are loaded 
     * *Not every app needs a carousel*
     * *easily optimize to just what your template needs*
   - Simple default less files for custom application themes 
     * `[theme_name]/variables.less`
     * `[theme_name]/bootswatch.css.less`
+  - Apply different custom themes or bootswatches from a site like [bootswatch.com](http://bootswatch.com/)
   - Create several themed swatches for your project with theme_names
     * e.g. an admin *(backend)* theme and a storefront *(frontend)* theme
   - Quickly build custom Bootstrap templates using live refresh to see your changes
@@ -117,6 +118,41 @@ Example:
     rails g scaffold Post title:string description:text
     rake db:migrate
     rails g bootswatch:themed Posts
+
+## Import a free [bootswatch.com](http://bootswatch.com/) theme
+
+### Just follow these three steps in the following order :)
+
+    rails g bootswatch:install cyborg
+    rails g bootswatch:import cyborg
+    rails g bootswatch:layout cyborg
+
+The above creates a namespaced theme under assets/javascript/cyborg assets/stylesheets/cyborg and a new layout file.
+
+The import generator pulls directly from the [bootswatch.com](http://bootswatch.com/) git repo [cyborg](https://github.com/thomaspark/bootswatch/tree/gh-pages/cyborg/) directory.
+
+* bootswatch.less
+* variables.less
+
+In your rails controllers just tell it to use the cyborg layout.
+
+
+```ruby
+class ApplicationController < ActionController::Base
+  # ...
+  layout 'cyborg'
+end
+```
+
+You can also create an admin namespaced theme and import the cyborg `bootswatch.less` and `variable.less` files:
+
+    rails g bootswatch:install admin
+    rails g bootswatch:import admin/cyborg
+    rails g bootswatch:layout admin
+
+*`bootswatch.less` is renamed to `bootswatch.css.less` by the import generator*
+
+Need more examples? Check out the [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo)
 
 ## Using stylesheets with the [less-rails](https://github.com/metaskills/less-rails/) gem
 
@@ -259,6 +295,6 @@ Bootstrap [claims](https://github.com/twbs/bootstrap#versioning) to use SemVer, 
 
 ## Changelog
   - v3.1.0.0
-    * Updated to bootstrap 3.1.0
-    * Moving bootswatch import generator to separate gem
-
+    * Updated to bootstrap 3.1.0    
+  - v3.1.0.1
+    * bootswatch import generator updated for 3.1.0 
