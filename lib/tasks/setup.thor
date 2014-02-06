@@ -8,8 +8,16 @@ class Setup < Thor
               '"twitter/bootstrap/"'
 
     gsub_file 'vendor/toolkit/twitter/bootstrap/glyphicons.less',
-              ' url(',
-              ' asset-url('
+              '~"url(',
+              'asset-url('
+
+    gsub_file 'vendor/toolkit/twitter/bootstrap/glyphicons.less',
+              ')";',
+              ');'
+
+    gsub_file 'vendor/toolkit/twitter/bootstrap/glyphicons.less',
+              ')",',
+              ');'
 
     gsub_file 'vendor/toolkit/twitter/bootstrap/mixins.less',
               ' url(',

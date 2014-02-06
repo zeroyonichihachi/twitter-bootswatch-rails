@@ -297,4 +297,6 @@ Bootstrap [claims](https://github.com/twbs/bootstrap#versioning) to use SemVer, 
   - v3.1.0.0
     * Updated to bootstrap 3.1.0    
   - v3.1.0.1
-    * bootswatch import generator updated for 3.1.0 
+    * bootswatch import generator updated for 3.1.0
+  - v3.1.0.2
+    * fix for [Glyphicons in Production #21](https://github.com/scottvrosenthal/twitter-bootswatch-rails/issues/21)
