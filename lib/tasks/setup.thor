@@ -61,4 +61,15 @@ js_files.each do |js_file|
 
   end
 
+  desc 'remove_imports_from_theme_less', 'remove imports from default bootstrap theme'
+  def remove_imports_from_theme_less
+    gsub_file 'vendor/toolkit/twitter/bootstrap/theme.less',
+              '@import "variables.less";',
+              ''
+
+    gsub_file 'vendor/toolkit/twitter/bootstrap/theme.less',
+              '@import "mixins.less";',
+              ''
+  end
+
 end

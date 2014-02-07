@@ -26,6 +26,8 @@ task :bundle do
 
   sh 'thor setup:bootstrap_update_less_files_with_theme_info'
 
+  sh 'thor setup:remove_imports_from_theme_less'
+
   ## end bootstrap config ##
 
   sh 'gem build twitter-bootswatch-rails.gemspec'
