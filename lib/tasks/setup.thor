@@ -29,7 +29,27 @@ class Setup < Thor
   def bootstrap_update_js_files_compilation_order
 
     # grab the js files compilation order from bootstrap Makefile
-    lines = IO.readlines('bootstrap/Gruntfile.js')[96..106]
+    # line start at first js file line
+    # Example:
+    #
+    #   bootstrap: {
+    # src: [
+    #   'js/transition.js', # start index at 99 on line 100
+    #   'js/alert.js',
+    #   'js/button.js',
+    #   'js/carousel.js',
+    #   'js/collapse.js',
+    #   'js/dropdown.js',
+    #   'js/modal.js',
+    #   'js/tooltip.js',
+    #   'js/popover.js',
+    #   'js/scrollspy.js',
+    #   'js/tab.js',
+    #   'js/affix.js' # end index at 110 on line 111
+    # ],
+    #
+    
+    lines = IO.readlines('bootstrap/Gruntfile.js')[99..110]
     # clean up array
     js_files = lines.map{|item| item.strip.gsub(/(\'|,|js\/|\.js)/, '')}
 
