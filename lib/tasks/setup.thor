@@ -3,13 +3,16 @@ class Setup < Thor
 
   desc 'bootstrap_update_asset_pipeline', 'make bootstrap less files use asset pipeline'
   def bootstrap_update_less_files_for_asset_pipeline
+
+    ## variables.less
     gsub_file 'vendor/toolkit/twitter/bootstrap/variables.less',
               '"../fonts/"',
               '"twitter/bootstrap/"'
 
+    ## glyphicons.less
     gsub_file 'vendor/toolkit/twitter/bootstrap/glyphicons.less',
-              '~"url(',
-              'asset-url('
+              ' url(',
+              ' asset-url('
 
     gsub_file 'vendor/toolkit/twitter/bootstrap/glyphicons.less',
               ')";',
@@ -19,10 +22,14 @@ class Setup < Thor
               ')",',
               '),'
 
+    ## mixins.less
     gsub_file 'vendor/toolkit/twitter/bootstrap/mixins.less',
               ' url(',
               ' asset-url('
 
+    gsub_file 'vendor/toolkit/twitter/bootstrap/mixins.less',
+              '"mixins/',
+              '"twitter/bootstrap/mixins/'
   end
 
   desc 'bootstrap_update js files compilation order', 'update bootstrap js files compilation order from bootstrap source'
@@ -34,7 +41,7 @@ class Setup < Thor
     #
     #   bootstrap: {
     # src: [
-    #   'js/transition.js', # start index at 99 on line 100
+    #   'js/transition.js', # start index at 94 on line 95
     #   'js/alert.js',
     #   'js/button.js',
     #   'js/carousel.js',
@@ -45,11 +52,13 @@ class Setup < Thor
     #   'js/popover.js',
     #   'js/scrollspy.js',
     #   'js/tab.js',
-    #   'js/affix.js' # end index at 110 on line 111
+    #   'js/affix.js' # end index at 105 on line 106
     # ],
-    #
     
-    lines = IO.readlines('bootstrap/Gruntfile.js')[99..110]
+    start_at_line = 95
+    end_at_line = 106
+
+    lines = IO.readlines('bootstrap/Gruntfile.js')[(start_at_line-1)..(end_at_line-1)]
     # clean up array
     js_files = lines.map{|item| item.strip.gsub(/(\'|,|js\/|\.js)/, '')}
 

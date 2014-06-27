@@ -13,6 +13,9 @@ task :bundle do
   sh 'rm -f app/assets/javascripts/twitter/bootstrap/*.js'
   sh 'cp -f bootstrap/js/*.js app/assets/javascripts/twitter/bootstrap'
 
+  sh 'rm -f vendor/toolkit/twitter/bootstrap/mixins/*.less'
+  sh 'cp -f bootstrap/less/mixins/*.less vendor/toolkit/twitter/bootstrap/mixins'
+
   sh 'rm -f vendor/toolkit/twitter/bootstrap/*.less'
   sh 'cp -f bootstrap/less/*.less vendor/toolkit/twitter/bootstrap'
 

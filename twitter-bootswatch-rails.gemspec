@@ -13,8 +13,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Scott V. Rosenthal"]
   s.email       = ["sr7575@gmail.com"]
   s.homepage    = "https://github.com/scottvrosenthal/twitter-bootswatch-rails"
-  s.summary     = %q{Bootstrap toolkit for Rails Asset Pipeline with less-rails}
-  s.description = %q{twitter-bootswatch-rails gem integrates Bootstrap for Rails Asset Pipeline with less-rails}
+  s.summary     = %q{TWBS Bootstrap integration gem for the Rails Asset Pipeline using less-rails}
+  s.description = %q{twitter-bootswatch-rails gem integrates TWBS Bootstrap for Rails Asset Pipeline with less-rails}
 
   s.files = Dir["lib/twitter/**/*"] + Dir["lib/generators/**/*"] + Dir["app/**/*"] + Dir["vendor/**/*"] + ["lib/twitter-bootswatch-rails.rb"]
 

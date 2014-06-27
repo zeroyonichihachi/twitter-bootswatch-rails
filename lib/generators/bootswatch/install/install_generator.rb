@@ -90,22 +90,33 @@ module Bootswatch
 
         bootstrap_less_imports = File.read(find_in_source_paths('bootstrap.less')).scan(Less::Rails::ImportProcessor::IMPORT_SCANNER).flatten.compact.uniq
 
-        template 'loader.css.less.tt', File.join(stylesheets_dest_path,'loader.css.less'), {less_imports: bootstrap_less_imports, theme_name: theme_name, theme_info: theme_info}
+        template 'loader.css.less.tt', File.join(stylesheets_dest_path,'loader.css.less'), {
+            less_imports: bootstrap_less_imports,
+            theme_name: theme_name,
+            theme_info: theme_info}
 
         # now variables and mixins
 
-        template 'variables.less.tt', File.join(stylesheets_dest_path,'variables.less'), {theme_name: theme_name, theme_info: theme_info}
+        template 'variables.less.tt', File.join(stylesheets_dest_path,'variables.less'), {
+            theme_name: theme_name,
+            theme_info: theme_info}
 
-        template 'mixins.less.tt', File.join(stylesheets_dest_path,'mixins.less'), {theme_name: theme_name, theme_info: theme_info}
+        template 'mixins.less.tt', File.join(stylesheets_dest_path,'mixins.less'), {
+            theme_name: theme_name,
+            theme_info: theme_info}
 
         # upgrade to new extension to trigger recompile
         if File.exist?(File.join(stylesheets_dest_path,'bootswatch.less'))
           File.rename(File.join(stylesheets_dest_path,'bootswatch.less'), File.join(stylesheets_dest_path,'bootswatch.css.less'))
         end
 
-        template 'bootswatch.css.less.tt', File.join(stylesheets_dest_path,'bootswatch.css.less'), {theme_name: theme_name, theme_info: theme_info}
+        template 'bootswatch.css.less.tt', File.join(stylesheets_dest_path,'bootswatch.css.less'), {
+            theme_name: theme_name,
+            theme_info: theme_info}
 
-        template 'base.less.tt', File.join(stylesheets_dest_path,'base.less'), {theme_name: theme_name, theme_info: theme_info}
+        template 'base.less.tt', File.join(stylesheets_dest_path,'base.less'), {
+            theme_name: theme_name,
+            theme_info: theme_info}
 
       end
 
