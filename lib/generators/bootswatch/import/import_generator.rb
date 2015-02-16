@@ -34,10 +34,6 @@ module Bootswatch
           "@import \"#{theme_directory}/base\";\n\n"
         end
 
-        gsub_file File.join(stylesheets_dest_path,'variables.less'),
-                  '"../img/glyphicons-halflings.png"',
-                  '"twitter/bootstrap/glyphicons-halflings.png"'
-
         gsub_file File.join(stylesheets_dest_path, 'variables.less'),
                   '"../fonts/"',
                   '"twitter/bootstrap/"'

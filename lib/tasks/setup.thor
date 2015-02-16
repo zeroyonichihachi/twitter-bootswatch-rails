@@ -41,7 +41,7 @@ class Setup < Thor
     #
     #   bootstrap: {
     # src: [
-    #   'js/transition.js', # start index at 94 on line 95
+    #   'js/transition.js', # start index at 109 on line 110
     #   'js/alert.js',
     #   'js/button.js',
     #   'js/carousel.js',
@@ -52,11 +52,11 @@ class Setup < Thor
     #   'js/popover.js',
     #   'js/scrollspy.js',
     #   'js/tab.js',
-    #   'js/affix.js' # end index at 105 on line 106
+    #   'js/affix.js' # end index at 120 on line 121
     # ],
     
-    start_at_line = 95
-    end_at_line = 106
+    start_at_line = 110
+    end_at_line = 121
 
     lines = IO.readlines('bootstrap/Gruntfile.js')[(start_at_line-1)..(end_at_line-1)]
     # clean up array
