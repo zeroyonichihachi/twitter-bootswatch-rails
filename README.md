@@ -75,8 +75,8 @@ Usage:
 Example:
 
 
-    rails g bootswatch:install admin
-    rails g bootswatch:install storefront
+    rails g bootswatch:install flatly
+    rails g bootswatch:install cosmo
 
 ***
 
