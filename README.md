@@ -241,6 +241,40 @@ RAILS_ENV=development rake assets:clean
 
 ***
 
+### Tooltips not enabled?
+
+Here's how you enable them:
+
+http://getbootstrap.com/javascript/#tooltips
+
+For performance reasons, the Tooltip data-apis are opt-in, meaning you must initialize them yourself.
+
+One way to initialize all tooltips on a page would be to select them by their data-toggle attribute:
+
+```javascript
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+```
+
+***
+
+### Popovers not enabled?
+
+http://getbootstrap.com/javascript/#popovers
+
+For performance reasons, the Popover data-apis are opt-in, meaning you must initialize them yourself.
+
+One way to initialize all popovers on a page would be to select them by their data-toggle attribute:
+
+```javascript
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+```
+
+***
+
 ### Less files are not found or loading errors for new rails application
 
 *(Remove the default require_tree directive line from both the application.js & application.css files)*
