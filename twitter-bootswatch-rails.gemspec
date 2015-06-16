@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency             'railties', '>= 3.1', '< 5.0'
   s.add_dependency             'less-rails', '~> 2.4'
-  s.add_dependency             'execjs', '~> 2.3.0'
+  s.add_dependency             'execjs', '~> 2.3', '>= 2.3.0'
 
   s.add_development_dependency 'rails', '>= 3.1', '< 5.0'
   s.add_development_dependency 'therubyracer', '~> 0.12', '>= 0.12.1'
